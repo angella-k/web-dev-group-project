@@ -1,8 +1,16 @@
 /* blue #2A416A
 purple #A24BE1 */
 
+:root {
+    --dark: #2A416A;
+    --secondary: #A24BE1;
+    --buttons: #75BBA0;
+    --tertiary: #E77EF8;
+    --background: #EFE8F4;
+}
+
 body {
-    background: #EFE8F4;
+    background: var(--background);
 }
 
 * {
@@ -18,7 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background: #2A416A;
+    background: var(--dark);
     color: #fff;
 }
 
@@ -33,7 +41,7 @@ footer a:hover {
 
 nav {
     padding: 20px 0;
-    background-color: #2A416A;
+    background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -110,7 +118,7 @@ main {
   }
 
 .banner {
-    background-color: #A24BE1;
+    background-color: var(--secondary);
     color: white;
     display: flex;
     flex-direction: column;
@@ -142,7 +150,7 @@ main {
 }
 
 .goal1, .goal2, .goal3 {
-    background-color: #2A416A;
+    background-color: var(--dark);
     color: white;
     padding: 20px;
 }
@@ -211,8 +219,7 @@ footer {
         left: 0;
         flex-direction: column;
         width: auto;
-        min-width: 100%;
-        background-color: #2A416A;
+        min-width: 100%;;
         overflow: hidden;
         transform: scaleY(0);
         transform-origin: top;
@@ -235,8 +242,6 @@ footer {
     .hambtn {
         display: flex;
         margin-left: auto;
-
-        /* show on mobile */
     }
 
 }

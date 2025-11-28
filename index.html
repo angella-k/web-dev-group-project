@@ -9,14 +9,32 @@
 
     <title>Sustainability Advisory Committee Home Page</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
+        <a href="index.html">Home</a>
+
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hambtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <ul class="topnav">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn"> Goals</button>
+                        <div class="dropdown-goals">
+                            <a href="goal1.html">Sustainable Cities and Communities</a>
+                            <a href="goal2.html">Zero Hunger</a>
+                            <a href="goal3.html">Gender Equality</a>
+                        </div>
+                </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -24,39 +42,46 @@
     </header>
 
     <main>
-        <section>
+        <section class="banner-section">
             <div class="banner">
                 <h1>Importance of local sustaibability</h2>
+                    <p>Learn how our community can contribute to global sustainability efforts through local actions and
+                        initiatives.</p>
             </div>
             <div class="banner-image">
                 <img src="" alt="Sustainability Image">
         </section>
 
-        <section class="goals">
+        <section class="goals-section">
             <article class="goal1">
                 <h2>Sustainable Cities and Communities</h2>
-
+                <button>Learn More</button>
             </article>
             <article class="goal2">
                 <h2>Zero Hunger</h2>
-
+                <button>Learn More</button>
             </article>
             <article class="goal3">
                 <h2>Gender Equality</h2>
-
+                <button>Learn More</button>
             </article>
+        </section>
 
-            <footer>
-                <section class="footertop">
+        <footer>
+            <section class="footertop">
+                <h3>Sustainability Advisory Committee</h3>
+                <li><a href="">Goals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </section>
+            <section class="footerbottom">
+                <p></p>
 
-                </section>
-                <section class="footerbottom">
-                    
-                </section>
-            </footer>
+            </section>
+        </footer>
     </main>
+    <script src="js/main.js"></script>
 
-    <script src="index.js"></script>
 </body>
 
 </html>

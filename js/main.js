@@ -3,7 +3,7 @@ const main = document.querySelector('main');
 
 checkbox.addEventListener('change', function() {
     if (this.checked) {
-        main.style.marginTop = '130px';
+        main.style.marginTop = '110px';
     } else {
         main.style.marginTop = '0';
     }

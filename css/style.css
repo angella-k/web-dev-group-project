@@ -294,6 +294,7 @@ footer {
 .footertop ul {
     list-style: none;
     display: grid;
+    padding-top: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
@@ -313,7 +314,7 @@ footer {
 }
 
 /* Mobile and tablet */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     header {
         position: relative;

@@ -9,23 +9,29 @@ checkbox.addEventListener('change', function() {
     }
 });
 
-window.addEventListener("resize", function() {
-    var width = window.innerWidth;
-
-    if (width < 600) {
-        main.style.marginTop = '125px';
-    } else {
-        main.style.marginTop = '0';
-    }
-});
-
-
-// Run when hamburger is clicked
+// when hamburger is clicked
 checkbox.addEventListener('change', function() {
     updateMargin();
 });
 
-// Run when screen is resized
+// when screen is resized
 window.addEventListener("resize", function() {
     updateMargin();
 });
+
+function updateMargin() {
+    const width = window.innerWidth;
+
+    // reset on desktop
+    if (width > 700) {
+        main.style.marginTop = '0';
+        return;
+    }
+
+    // mobile and tablet
+    if (checkbox.checked && width < 700) {
+        main.style.marginTop = '125px';
+    } else {
+        main.style.marginTop = '0';
+    }
+}

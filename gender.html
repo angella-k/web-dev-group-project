@@ -7,18 +7,37 @@
     <meta name="description" content="Sustainability Advisory Committee Home Page">
     <meta name="author" content="Angella Howard, Leia Richards, Conor Fitzgerald, Jake Cunningham">
 
-    <title>Goal 3: Gender Equality</title>
+    <title>Sustainability Advisory Committee Home Page</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
 </head>
 
 <body>
     <header>
+        <a class="logo-text" href="index.html">
+            <img class="logo" src="assets/image.png">SAC</a>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hambtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="topnav">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Goals v</button>
+                        <div class="dropdown-goals">
+                            <a href="cities.html">Sustainable Cities and <br> Communities</a>
+                            <a href="hunger.html">Zero Hunger</a>
+                            <a href="gender.html">Gender Equality</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="signup.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +45,7 @@
     <main>
         <H1>Gender Equality </H1>
         <p>The third sustainable goal we have chosen is to achieve gender equality and empower all women and girls.</p>
-        <p class="button">Find out more >>></p>
+        <p class="button">Find out more</p>
 
         <section>
             <h3>Why this goal matters</h3>
@@ -36,17 +55,19 @@
         <section>
             <h3>Possible policies to make change at the local level</h3>
             <article>
-                <p>Target 5.5, of the sustainable development goals, is to Ensure women's full and effective participation in leadership and decision-making. As policy makers you should ensure inclusion of women and hire more women in prominent roles</p>
+                <p>Target 5.5 of the sustainable development goals is to Ensure women's full and effective participation in leadership and decision-making. As policy makers you should ensure inclusion of women and hire more women in prominent roles</p>
                 <figure></figure>
                 <figcaption>Figure shows proportion of women in political leadership roles since ...</figcaption>
             </article>
             <article>
-                <p></p>
+                <p>Target 5.3 of the sustainable development goals is to eliminate forced marriages and any other harmful practices such as female genital mutilation. While this isn't an issue local to your area it is still important that you take part in action to help get rid of these practices world wide as they are still prevalent issues in many parts of the world. As a policy maker you could help push for initiatives to raise awareness and help facilitate charity functions in your area. You could also push for legislation that criminalises taking women children abroad to countries where it is legal to force them to marry </p>
                 <figure></figure>
+            <figcaption>Protest against forced child marriages</figcaption>
             </article>
             <article>
-                <p></p>
+                <p>Target 5.2 of the SDG is to end all violence against women and girls. As policy makers you have the power to protect women from violence and exploitation. You can create policies to enforce women's safety and prevent exploitation like policing dangerous areas and providing better avenues for reporting sexual crimes. This goal is especially important as in the past couple decades sexual violence against women and girls has risen significantly showing a lack of action to protect women and girls</p>
                 <figure></figure>
+            <figcaption>Figure sourced from the bbc shows reported instances of rape and sexual assault since 2006 </figcaption>
             </article>
         </section>
         <section>
@@ -54,19 +75,28 @@
             <p></p>
             <a href="https://globalgoals.org/goals/5-gender-equality/">Find out more</a>
         </section>
-        
+       
 
     </main>
 
     <footer>
-        <section class="footertop">
+            <section class="footertop">
+                <h3>Sustainability Advisory Committee</h3>
+                <ul>
+                    <li><a href="team.html">About the Sustainabliliy Advisory Committee</a></li>
+                    <li><a href="signup.html">Contact Us</a></li>
+                    <li><a href="signup.html">Join our Newsletter</a></li>
+                    <li><a href="">United Nations Page</a></li>
+                    <li><a href="">Site Guide</a></li>
+                </ul>
+            </section>
+            <section class="footerbottom">
+                <p>Copyright © 2025 Sustainability Advisory Committee, All rights reserved.</p>
 
-        </section>
-        <section class="footerbottom">
-            
-        </section>
-    </footer>
-    <script src="index.js"></script>
+            </section>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

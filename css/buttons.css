@@ -1,0 +1,23 @@
+:root {
+    --main: #2A416A;
+    --secondary: #A24BE1;
+    --buttons: #75BBA0;
+    --tertiary: #E77EF8;
+    --background: #EFE8F4;
+}
+
+main button {
+    background-color: #75bba088;
+    color: white;
+    border-color: var(--buttons);
+    padding: 10px 0;
+    margin: 0 20%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+main button:hover {
+    background-color: var(--buttons);
+}

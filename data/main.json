@@ -1,0 +1,20 @@
+{
+  "logo": {
+    "src": "assets/image.png",
+    "text": "SAC",
+    "url": "index.html"
+  },
+  "nav": [
+    {
+      "type": "dropdown",
+      "label": "Goals v",
+      "items": [
+        { "text": "Sustainable Cities and Communities", "url": "cities.html" },
+        { "text": "Zero Hunger", "url": "hunger.html" },
+        { "text": "Gender Equality", "url": "gender.html" }
+      ]
+    },
+    { "type": "link", "text": "About", "url": "team.html" },
+    { "type": "link", "text": "Contact", "url": "signup.html" }
+  ]
+}

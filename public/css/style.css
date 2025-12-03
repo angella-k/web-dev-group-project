@@ -100,6 +100,38 @@ nav ul li a:hover {
     border-bottom: #75BBA0 2px solid;
 }
 
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--main);
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 35px 0 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #00000000 2px solid;
+}
+
+.dropbtn:hover {
+    border-bottom: #75BBA0 2px solid;
+}
+
+.dropdown-goals a {
+    color: var(--main);
+    padding: 10px 12px 10px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: white;
+}
+
+.dropdown-goals a:hover {
+    color: #31415b;
+    background-color: #EFE8F4;
+}
+
 .hambtn {
     color: var(--main);
     font-size: 18px;
@@ -111,11 +143,6 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: space-between;
     margin-left: auto;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
 }
 
 .hambtn span {
@@ -133,48 +160,15 @@ main {
     transition: margin-top 0.5s ease;
 }
 
-.dropbtn {
-    background: none;
-    border: none;
-    color: var(--main);
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0 0 0 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: #00000000 2px solid;
-}
-
-.dropbtn:hover {
-    border-bottom: #75BBA0 2px solid;
-}
-
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
 .dropdown-goals {
     display: none;
     /* hidden until hovered */
     position: absolute;
-}
-
-.dropdown-goals a {
-    color: var(--main);
-    padding: 10px 12px 10px 12px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-goals a:hover {
-    color: #31415b;
-    background-color: #EFE8F4;
 }
 
 .dropdown:hover .dropdown-goals {
@@ -244,9 +238,8 @@ main {
 }
 
 .goals-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    overflow: hidden;
 }
 
 .goal1,
@@ -260,33 +253,71 @@ main {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    cursor: pointer;
+    position: relative;
+    flex: 1 1 33.33%;
+    min-width: 0;
+    background-size: 200% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: flex 0.6s ease, background-size 0.6s ease;
 }
 
 .goal1 {
     background-image: url('../assets/goal1.jpg');
-    background-size: cover;
-    background-position: center;
-
 }
 
 .goal2 {
     background-image: url('../assets/goal2.jpg');
-    background-size: cover;
-    background-position: center;
-
 }
 
 .goal3 {
     background-image: url('../assets/goal3.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .goal1 h2,
 .goal2 h2,
 .goal3 h2 {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: clamp(18px, 4vw, 24px);
+    color: var(--background);
+    transition: font-size 0.6s ease, opacity 0.6s ease, color 0.6s ease;
+}
+
+.goal1 button,
+.goal2 button,
+.goal3 button {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/*Hides the text and the button if it isn't the thing being hovered*/
+.goals-section:hover h2,
+.goals-section:hover button {
+    opacity: 0;
+}
+
+/*Expands the hovered image*/
+.goals-section .goal1:hover,
+.goals-section .goal2:hover,
+.goals-section .goal3:hover {
+    flex: 5 1 70%;
+    z-index: 10;
+    background-size: 100% auto;
+}
+
+/* Show hovered text/button + makes it bigger */
+.goals-section .goal1:hover h2,
+.goals-section .goal2:hover h2,
+.goals-section .goal3:hover h2 {
+    font-size: clamp(32px, 6vw, 48px);
+    color: white;
+    opacity: 1;
+}
+.goals-section .goal1:hover button,
+.goals-section .goal2:hover button,
+.goals-section .goal3:hover button {
+    opacity: 1;
+    transform: scale(1.15);
 }
 
 footer {
@@ -312,7 +343,6 @@ footer {
 .footertop ul {
     list-style: none;
     display: grid;
-    padding-top: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
@@ -338,7 +368,7 @@ footer {
         position: relative;
     }
 
-    nav .nav-link {
+    nav {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -379,6 +409,7 @@ footer {
 
     #hamburger:checked~nav ul.topnav {
         transform: scaleY(1);
+        padding: 8px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -400,7 +431,44 @@ footer {
     }
 
     .goals-section {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .goal1,
+    .goal2,
+    .goal3 {
+        flex: 1 1 auto;
+    }
+
+    /* Disable hover animations on mobile */
+    .goals-section:hover .goal1 h2,
+    .goals-section:hover .goal2 h2,
+    .goals-section:hover .goal3 h2,
+    .goals-section:hover .goal1 button,
+    .goals-section:hover .goal2 button,
+    .goals-section:hover .goal3 button {
+        opacity: 1;
+    }
+
+    .goals-section .goal1:hover,
+    .goals-section .goal2:hover,
+    .goals-section .goal3:hover {
+        flex: 1 1 auto;
+        z-index: auto;
+        background-size: 200% auto;
+    }
+
+    .goals-section .goal1:hover h2,
+    .goals-section .goal2:hover h2,
+    .goals-section .goal3:hover h2 {
+        font-size: clamp(18px, 4vw, 24px);
+        color: var(--background);
+    }
+
+    .goals-section .goal1:hover button,
+    .goals-section .goal2:hover button,
+    .goals-section .goal3:hover button {
+        transform: scale(1);
     }
 
 

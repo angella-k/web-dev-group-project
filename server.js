@@ -47,12 +47,18 @@ app.post("/contact", (req, res) => {
     
     // Read existing data in the data folder
     let signups = [];
-    if (fs.existsSync("data/signups.json")) {
-        let data = fs.readFileSync("data/signups.json", "utf8");
+    if (fs.existsSync("data/database.json")) {
+        let data = fs.readFileSync("data/database.json", "utf8");
         signups = JSON.parse(data);
     }
     
     // Add new signup data CREATE A THING TO CHECK IF THERE IS ALREADY THE SAME EMAIL
+
+    const existingEmail = signups.find((entry) => entry.email.toLowerCase() == signup.email.toLowerCase())
+    if (existingEmail) {
+        res.json({success: false, message: `${email} already in use!`});
+    }
+
     signups.push(signup);
     
     // Create data folder incase it isn't there
@@ -61,7 +67,7 @@ app.post("/contact", (req, res) => {
     }
     
     // Save data to the file
-    fs.writeFileSync("data/signups.json", JSON.stringify(signups, null, 2));
+    fs.writeFileSync("data/database.json", JSON.stringify(signups, null, 2));
     
     res.json({ success: true, message: `Thank you for signing up, ${firstName}!` });
 });

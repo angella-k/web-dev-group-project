@@ -3,14 +3,6 @@
 const checkbox = document.getElementById('hamburger');
 const main = document.querySelector('main');
 
-checkbox.addEventListener('change', function () {
-    if (this.checked) {
-        main.style.marginTop = '110px';
-    } else {
-        main.style.marginTop = '0';
-    }
-});
-
 // when hamburger is clicked
 checkbox.addEventListener('change', function () {
     updateMargin();
@@ -32,7 +24,7 @@ function updateMargin() {
 
     // mobile and tablet
     if (checkbox.checked && width < 700) {
-        main.style.marginTop = '125px';
+        main.style.marginTop = '200px';
     } else {
         main.style.marginTop = '0';
     }
@@ -66,19 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 dropdownContainer.appendChild(link);
             });
 
-            const nav = document.querySelector('.nav-link');
+            const nav = document.querySelector('.topnav');
 
-            data.nav.forEach(item => { 
-                const li = document.createElement('li');
-                const a = document.createElement('a');
+            data.nav
+                .filter(item => item.type === 'topnav')
+                .forEach(item => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
 
-                a.href = item.url;
-                a.textContent = item.text;
-                li.appendChild(a);
-                nav.appendChild(li);
-            });
+                    a.href = item.url;
+                    a.textContent = item.text;
+                    li.appendChild(a);
+                    nav.appendChild(li);
+                });
 
-            
+
+
         })
         .catch(error => console.error('Error fetching header data:', error));
 });

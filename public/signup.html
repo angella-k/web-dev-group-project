@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up to receive updates from the Sustainability Advisory Committee">
+    <title>Sign Up - Sustainability Advisory Committee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo-text" href="index.html">
+            <img class="logo" src="assets/image.png" alt="SAC Logo">SAC</a>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hambtn">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Goals v</button>
+                        <div class="dropdown-goals">
+                            <a href="goal1.html">Sustainable Cities and Communities</a>
+                            <a href="goal2.html">Zero Hunger</a>
+                            <a href="goal3.html">Gender Equality</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="signup.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-section">
+            <h2>Sign Up Here</h2>
+            <p>Sign up to receive any updates and news about our goals.</p>
+
+            <form id="signupForm" novalidate>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comments">Message (optional):</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Say here why you chose to sign up..."></textarea>
+
+                <button type="submit">Submit</button>
+                <p id="responseMessage"></p>
+            </form>
+        </section>
+
+        <footer>
+            <section class="footertop">
+                <h3>Sustainability Advisory Committee</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">About</a></li>
+                    <li><a href="signup.html">Contact</a></li>
+                </ul>
+            </section>
+            <section class="footerbottom">
+                <p>Copyright © 2025 Sustainability Advisory Committee, All rights reserved.</p>
+            </section>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

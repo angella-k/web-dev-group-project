@@ -89,38 +89,6 @@ nav ul li a:hover {
     border-bottom: #75BBA0 2px solid;
 }
 
-.dropbtn {
-    background: none;
-    border: none;
-    color: var(--main);
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0 35px 0 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: #00000000 2px solid;
-}
-
-.dropbtn:hover {
-    border-bottom: #75BBA0 2px solid;
-}
-
-.dropdown-goals a {
-    color: var(--main);
-    padding: 10px 12px 10px 12px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    background-color: white;
-}
-
-.dropdown-goals a:hover {
-    color: #31415b;
-    background-color: #EFE8F4;
-}
-
 .hambtn {
     color: var(--main);
     font-size: 18px;
@@ -132,6 +100,11 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: space-between;
     margin-left: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
 }
 
 .hambtn span {
@@ -149,15 +122,48 @@ main {
     transition: margin-top 0.5s ease;
 }
 
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--main);
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 0 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #00000000 2px solid;
+}
+
+.dropbtn:hover {
+    border-bottom: #75BBA0 2px solid;
+}
+
 .dropdown {
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 
 .dropdown-goals {
     display: none;
     /* hidden until hovered */
     position: absolute;
+}
+
+.dropdown-goals a {
+    color: var(--main);
+    padding: 10px 12px 10px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-goals a:hover {
+    color: #31415b;
+    background-color: #EFE8F4;
 }
 
 .dropdown:hover .dropdown-goals {
@@ -320,7 +326,7 @@ footer {
         position: relative;
     }
 
-    nav {
+    nav .nav-link {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -342,13 +348,12 @@ footer {
 
     nav ul li a {
         display: block;
-        margin: 10px 16px;
+        margin: 0 16px 16px 16px;
         white-space: nowrap;
     }
 
     #hamburger:checked~nav ul.topnav {
         transform: scaleY(1);
-        padding: 8px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -359,6 +364,7 @@ footer {
 
     .dropdown-goals a {
         margin: 0;
+        text-wrap: wrap;
     }
 
     .banner-section {
@@ -378,7 +384,7 @@ footer {
     }
 
     .dropbtn {
-        margin: 0 0 8px 0;
+        margin: 0 0 0 0;
         display: flex;
         align-items: center;
         justify-content: center;

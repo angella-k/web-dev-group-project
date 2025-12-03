@@ -5,6 +5,15 @@
     src: url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 :root {
     --main: #2A416A;
     --secondary: #9066ae;
@@ -58,10 +67,12 @@ footer a:hover {
     vertical-align: middle;
 }
 
-.logo-text {
-    font-size: 24px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.logo-name {
+    color: var(--main);
+    font-family: "Cookie", cursive;
+    font-size: 30px;
     font-weight: bold;
+    margin-left: -8px;
 }
 
 nav {
@@ -220,6 +231,7 @@ main {
     align-items: center;
     justify-content: center;
     justify-self: center;
+    text-align: center;
 }
 
 .text-section h2 {
@@ -348,8 +360,21 @@ footer {
 
     nav ul li a {
         display: block;
-        margin: 0 16px 16px 16px;
         white-space: nowrap;
+    }
+
+    nav ul.topnav li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul.topnav li a {
+        margin: 0;
+        /* Remove default margins so centering works */
+        padding: 10px 0 10px 0;
+        text-align: center;
+        width: 100%;
     }
 
     #hamburger:checked~nav ul.topnav {
@@ -360,11 +385,6 @@ footer {
     .hambtn {
         display: flex;
         margin-left: auto;
-    }
-
-    .dropdown-goals a {
-        margin: 0;
-        text-wrap: wrap;
     }
 
     .banner-section {
@@ -383,11 +403,29 @@ footer {
         grid-template-columns: 1fr;
     }
 
+
     .dropbtn {
-        margin: 0 0 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: none;
+    }
+
+    .dropdown-goals {
+        display: flex !important;
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dropdown-goals a {
+        width: 100%;
+        text-align: center;
+        background: white;
+        box-shadow: none;
+    }
+
+    .dropdown-goals a:hover {
+        background-color: white;
     }
 
     .footertop ul {

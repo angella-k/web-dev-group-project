@@ -1,0 +1,24 @@
+{
+  "signup": {
+    "title": "Join our newsletter!",
+    "description": "Sign up to receive any updates and news about our goals.",
+    "form": {
+      "labels": {
+        "firstName": {
+          "label": "First Name:"
+        },
+        "lastName": {
+          "label": "Last Name:"
+        },
+        "email": {
+          "label": "Email:"
+        },
+        "message": {
+          "label": "Message (optional):",
+          "placeholder": "Say here why you chose to sign up..."
+        }
+      },
+      "button": "Submit"
+    }
+  }
+}

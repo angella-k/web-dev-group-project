@@ -1,0 +1,29 @@
+{
+  "banner": {
+    "title": "Importance of local sustainability",
+    "text": "Learn how our community can contribute to global sustainability efforts through local actions.",
+    "image": {
+      "src": "assets/banner.jpg",
+      "alt": "Sustainability Image"
+    }
+  },
+  "text": {
+    "title": "Welcome to the Sustainability Advisory Committee",
+    "text": "The Sustainability Advisory Committee (SAC) is focused on promoting sustainable practices within the local community. We seek to raise awareness about environmental issues and encourage individuals and organizations to take action towards a more sustainable future."
+  },
+  "goal1": {
+    "title": "Sustainable Cities and Communities",
+    "button": "Learn More",
+    "url": "cities.html"
+  },
+  "goal2": {
+    "title": "Zero Hunger",
+    "button": "Learn More",
+    "url": "hunger.html"
+  },
+  "goal3":{
+    "title": "Gender Equality",
+    "button": "Learn More",
+    "url": "gender.html"
+  }
+}

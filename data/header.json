@@ -9,13 +9,29 @@
       "type": "dropdown",
       "label": "Goals  v",
       "items": [
-        { "text": "Sustainable Cities and Communities", "url": "cities.html" },
-        { "text": "Zero Hunger", "url": "hunger.html" },
-        { "text": "Gender Equality", "url": "gender.html" }
+        {
+          "text": "Sustainable Cities and Communities",
+          "url": "cities.html"
+        },
+        {
+          "text": "Zero Hunger",
+          "url": "hunger.html"
+        },
+        {
+          "text": "Gender Equality",
+          "url": "gender.html"
+        }
       ]
     },
-    { "type": "topnav", "text": "About", "url": "team.html" },
-    { "type": "topnav", "text": "Contact", "url": "signup.html" }
+    {
+      "type": "topnav",
+      "text": "About our team",
+      "url": "team.html"
+    },
+    {
+      "type": "topnav",
+      "text": "Contact us",
+      "url": "signup.html"
+    }
   ]
 }
-

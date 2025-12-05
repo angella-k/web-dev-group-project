@@ -18,6 +18,25 @@ main button {
     transition: background-color 0.3s ease;
 }
 
+main .button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #75bba088;
+    border-color: var(--buttons);
+    padding: 10px 0;
+    margin: 0 20%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
+
+
+
 main button:hover {
     background-color: var(--buttons);
 }

@@ -23,6 +23,8 @@ main .button {
     color: white;
     text-decoration: none;
     border-radius: 4px;
+    border:#67a48d;
+    border-style:groove;
     font-weight: bold;
     text-align: center;
     background-color: #75bba088;
@@ -35,8 +37,6 @@ main .button {
 
 }
 
-
-
-main button:hover {
+main button:hover, main .button:hover {
     background-color: var(--buttons);
 }

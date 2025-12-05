@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/header.json", (req, res) => {
-    res.sendFile(path.join(__dirname, "data", "header.json"));
+app.get("/headerFooter.json", (req, res) => {
+    res.sendFile(path.join(__dirname, "data", "headerFooter.json"));
 });
 
 app.get('/index.json', (req, res) => {

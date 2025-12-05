@@ -33,5 +33,31 @@
       "text": "Contact us",
       "url": "signup.html"
     }
-  ]
+  ],
+
+  "footer": "Sustainability Advisory Committee",
+  "links": [
+    {
+      "text": "About our team",
+      "url": "team.html"
+    },
+    {
+      "text": "Contact Us",
+      "url": "signup.html"
+    },
+    {
+      "text": "Join our Newsletter",
+      "url": "signup.html"
+    },
+    {
+      "text": "United Nations Page",
+      "url": "https://sdgs.un.org/"
+    },
+    {
+      "text": "Site Guide",
+      "url": "siteguide.html"
+    }
+  ],
+  "copyright": "Copyright © 2025 Sustainability Advisory Committee, All rights reserved."
 }
+

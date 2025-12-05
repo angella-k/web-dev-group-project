@@ -34,7 +34,7 @@ function updateMargin() {
 document.addEventListener('DOMContentLoaded', () => {
 
     // fetch and display JSON data for header/topnav
-    fetch('/header.json')
+    fetch('/headerFooter.json')
         .then(response => response.json())
         .then(data => {
 
@@ -74,7 +74,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     nav.appendChild(li);
                 });
 
+            //footer
 
+            const title = document.querySelector(".footer-title");
+            title.textContent = data.footer;
+
+            const list = document.querySelector(".footer-links");
+
+            data.links.forEach(link => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+
+                a.href = link.url;
+                a.textContent = link.text;
+
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+
+            const footerBottom = document.querySelector(".footerbottom");
+            const copyright = document.createElement('p');
+            copyright.textContent = data.copyright;
+            footerBottom.appendChild(copyright);
 
         })
         .catch(error => console.error('Error fetching header data:', error));

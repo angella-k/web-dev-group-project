@@ -106,7 +106,7 @@ nav ul li a:hover {
     color: var(--main);
     font-weight: bold;
     font-size: 16px;
-    margin: 0 35px 0 16px;
+    margin: 0 25px 0 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -276,20 +276,20 @@ main {
 .goal2 h2,
 .goal3 h2 {
     margin-bottom: 10px;
-    font-size: clamp(18px, 4vw, 24px);
+    font-size: clamp(16px, 4vw, 20px);
     color: var(--background);
     transition: font-size 0.6s ease, opacity 0.6s ease, color 0.6s ease;
 }
 
-.goal1 button,
-.goal2 button,
-.goal3 button {
+.goal1 a,
+.goal2 a,
+.goal3 a {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /*Hides the text and the button if it isn't the thing being hovered*/
 .goals-section:hover h2,
-.goals-section:hover button {
+.goals-section:hover a {
     opacity: 0;
 }
 
@@ -306,15 +306,15 @@ main {
 .goals-section .goal1:hover h2,
 .goals-section .goal2:hover h2,
 .goals-section .goal3:hover h2 {
-    font-size: clamp(20px, 6vw, 30px);
+    font-size: clamp(20px, 6vw, 25px);
     color: white;
     opacity: 1;
 }
-.goals-section .goal1:hover button,
-.goals-section .goal2:hover button,
-.goals-section .goal3:hover button {
+.goals-section .goal1:hover a,
+.goals-section .goal2:hover a,
+.goals-section .goal3:hover a {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 
 footer {
@@ -441,9 +441,9 @@ footer {
     .goals-section:hover .goal1 h2,
     .goals-section:hover .goal2 h2,
     .goals-section:hover .goal3 h2,
-    .goals-section:hover .goal1 button,
-    .goals-section:hover .goal2 button,
-    .goals-section:hover .goal3 button {
+    .goals-section:hover .goal1 a,
+    .goals-section:hover .goal2 a,
+    .goals-section:hover .goal3 a {
         opacity: 1;
     }
 
@@ -462,9 +462,9 @@ footer {
         color: var(--background);
     }
 
-    .goals-section .goal1:hover button,
-    .goals-section .goal2:hover button,
-    .goals-section .goal3:hover button {
+    .goals-section .goal1:hover a,
+    .goals-section .goal2:hover a,
+    .goals-section .goal3:hover a {
         transform: scale(1);
     }
 

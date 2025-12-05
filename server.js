@@ -13,9 +13,13 @@ app.get("/", (req, res) => {
         if (err) console.log(err);
     });
 });
+
 app.get("/header.json", (req, res) => {
     res.sendFile(path.join(__dirname, "data", "header.json"));
+});
 
+app.get('/index.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'data', 'index.json'));
 });
 
 app.post("/contact", (req, res) => {

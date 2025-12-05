@@ -24,14 +24,16 @@ function updateMargin() {
 
     // mobile and tablet
     if (checkbox.checked && width < 700) {
-        main.style.marginTop = '200px';
+        main.style.marginTop = '220px';
     } else {
         main.style.marginTop = '0';
     }
 }
 
-// fetch and display JSON data for header/topnav
+//ensuring html is loaded before the js runs
 document.addEventListener('DOMContentLoaded', () => {
+
+    // fetch and display JSON data for header/topnav
     fetch('/header.json')
         .then(response => response.json())
         .then(data => {
@@ -78,6 +80,67 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching header data:', error));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+
+            //loading in json content to html file for the banner
+            const banner = document.querySelector('.banner');
+            const bannerTitle = document.createElement('h1');
+            const bannerText = document.createElement('p');
+
+            bannerTitle.textContent = data.banner.title;
+            bannerText.textContent = data.banner.text;
+
+            banner.appendChild(bannerTitle);
+            banner.appendChild(bannerText);
+
+            const bannerImage = document.querySelector('.image');
+            bannerImage.src = data.banner.image.src;
+            bannerImage.alt = data.banner.image.alt;
+
+            //loading in json content for text section
+            const textSection = document.querySelector('.text-section');
+            const textTitle = document.createElement('h2');
+            const text = document.createElement('p');
+
+            textTitle.textContent = data.text.title;
+            text.textContent = data.text.text;
+
+            textSection.appendChild(textTitle);
+            textSection.appendChild(text);
+
+            //loading in json content for goals section
+            const goalsSection = document.querySelector('.goals-section');
+            const goal1 = document.querySelector('.goal1');
+            const goal2 = document.querySelector('.goal2');
+            const goal3 = document.querySelector('.goal3');
+            //goal 1
+            const goalClass = ["goal1", "goal2", "goal3"];
+            const goalData = [data.goal1, data.goal2, data.goal3];
+
+            for (let i = 0; i < goalClass.length; i++) {
+                const article = document.querySelector("." + goalClass[i]);
+                const goal = goalData[i];
+
+                const title = document.createElement("h2");
+                title.textContent = goal.title;
+
+                const button = document.createElement("a");
+                button.textContent = goal.button;
+                button.href = goal.url;
+                button.classList.add("button");
+
+                article.appendChild(title);
+                article.appendChild(button);
+            }
+
+        })
+        .catch(error => console.error('Error fetching index data:', error));
+});
+
+
 
 let myForm = document.getElementById('signupForm');
 let firstName = document.getElementById('firstName');
@@ -89,35 +152,35 @@ let confirmMessage = document.getElementById('responseMessage');
 if (myForm) {
     myForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const formBody = {
             firstName: firstName.value,
             lastName: lastName.value,
             email: email.value,
             comments: comments.value
         };
-        
+
         const requestHeaders = {
             "Content-Type": "application/json"
         };
-        
+
         fetch("/contact", {
             method: "POST",
             headers: requestHeaders,
             body: JSON.stringify(formBody)
         })
-        .then(response => response.json())
-        .then(responseData => {
-            console.log(responseData);
-            if (responseData.success) {
-                confirmMessage.textContent = responseData.message;
-                confirmMessage.style.color = 'green';
-                myForm.reset();
-            } else {
-                confirmMessage.textContent = responseData.message;
-                confirmMessage.style.color = 'red';
-            }
-        })
-        .catch(err => console.error("Fetch error:", err));
+            .then(response => response.json())
+            .then(responseData => {
+                console.log(responseData);
+                if (responseData.success) {
+                    confirmMessage.textContent = responseData.message;
+                    confirmMessage.style.color = 'green';
+                    myForm.reset();
+                } else {
+                    confirmMessage.textContent = responseData.message;
+                    confirmMessage.style.color = 'red';
+                }
+            })
+            .catch(err => console.error("Fetch error:", err));
     });
 }

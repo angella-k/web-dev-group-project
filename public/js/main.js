@@ -206,24 +206,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load team.json content if on team page
 document.addEventListener('DOMContentLoaded', () => {
-    const bannerSection = document.querySelector('.banner-section');
+    const banner1Section = document.querySelector('.banner1-section');
     
     // Only run this on team page
-    if (!bannerSection) return;
+    if (!banner1Section) return;
     
     fetch('/team.json')
         .then(response => response.json())
         .then(data => {
             
             // Banner section
-            const bannerTitle = bannerSection.querySelector('h1');
-            const bannerButton = bannerSection.querySelector('.banner-button');
+            const banner1Title = banner1Section.querySelector('h1');
+            const banner1Button = banner1Section.querySelector('.banner1-button');
             
-            bannerTitle.textContent = data.banner.title;
-            bannerButton.textContent = data.banner.buttonText;
+            banner1Title.textContent = data.banner1.title;
+            banner1Button.textContent = data.banner1.buttonText;
             
             // Background image
-            bannerSection.style.backgroundImage = `url('${data.banner.image}')`;
+            banner1Section.style.backgroundImage = `url('${data.banner1.image}')`;
             
             // Section 1
             const section1 = document.querySelector('.content-section-1');

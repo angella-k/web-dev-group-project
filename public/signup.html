@@ -15,6 +15,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sustainability Advisory Committee Home Page">
+    <meta name="author" content="Angella Howard, Leia Richards, Conor Fitzgerald, Jake Cunningham">
+
+    <title>Sustainability Advisory Committee Home Page</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/buttons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -44,7 +60,23 @@
 
     <main>
         <section class="text-section">
-            <h2>Join our newsletter!</h2>
+            <h2></h2>
+            <p></p>
+
+            <form id="signupForm" novalidate>
+                <label for="firstName"></label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName"></label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comments"></label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="submit"></button>
             <p>Sign up to receive any updates and news about our goals.</p>
 
             <form id="signupForm" novalidate>
@@ -61,6 +93,7 @@
                 <textarea id="comments" name="comments" rows="4" placeholder="Say here why you chose to sign up..."></textarea>
 
                 <button type="submit">Submit</button>
+
                 <p id="responseMessage"></p>
             </form>
         </section>
@@ -72,6 +105,15 @@
                 </ul>
             </section>
             <section class="footerbottom">
+            <section class="footertop">
+                <h3 class="footer-title"></h3>
+                <ul class="footer-links">
+                </ul>
+            </section>
+            <section class="footerbottom">
+
+                <p>Copyright © 2025 Sustainability Advisory Committee, All rights reserved.</p>
+
             </section>
         </footer>
     </main>

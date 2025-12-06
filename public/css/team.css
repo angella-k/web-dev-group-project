@@ -1,0 +1,292 @@
+:root {
+    --main: #2A416A;
+    --secondary: #A24BE1;
+    --buttons: #75BBA0;
+    --tertiary: #E77EF8;
+    --background: #EFE8F4;
+}
+
+main {
+    padding: 0;
+}
+
+.banner-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(42, 65, 106, 0.5);
+    z-index: 1;
+}
+
+.banner-section h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-image {
+    display: none;
+}
+
+.banner-button {
+    background-color: var(--buttons);
+    color: var(--main);
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.banner-button:hover {
+    background-color: var(--tertiary);
+    color: white;
+}
+
+.content-section-1 {
+    background-color: var(--background);
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section-1 h2 {
+    color: var(--main);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-section-1 p {
+    color: var(--main);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.content-section-2 {
+    background-color: var(--main);
+    padding: 60px 20px;
+    color: white;
+}
+
+.content-section-2 h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team-member {
+    text-align: left;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.team-member p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+}
+
+.team-member-image {
+    display: none;
+}
+
+.signup-section {
+    background-color: var(--background);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-box {
+    background-color: var(--secondary);
+    color: white;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.signup-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.signup-content p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.signup-button {
+    background-color: var(--buttons);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+}
+
+.signup-button:hover {
+    background-color: var(--tertiary);
+    color: white;
+}
+
+.resources-section {
+    background-color: white;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.resources-content h2 {
+    color: var(--main);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.resources-content p {
+    color: var(--main);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.resources-button {
+    background-color: var(--buttons);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.resources-button:hover {
+    background-color: var(--tertiary);
+    color: white;
+}
+
+.resources-image {
+    width: 100%;
+    height: 300px;
+    background-color: var(--background);
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .banner-section h1 {
+        font-size: 36px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .signup-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .banner-section {
+        padding: 80px 15px;
+    }
+
+    .banner-section h1 {
+        font-size: 28px;
+    }
+
+    .content-section-1,
+    .content-section-2,
+    .signup-section,
+    .resources-section {
+        padding: 40px 15px;
+    }
+
+    .content-section-1 h2,
+    .content-section-2 h2,
+    .resources-content h2 {
+        font-size: 24px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .signup-box {
+        padding: 30px 20px;
+    }
+
+    .signup-content h2 {
+        font-size: 22px;
+    }
+
+    .signup-button {
+        width: 100%;
+    }
+
+    .resources-button {
+        width: 100%;
+    }
+}

@@ -22,5 +22,8 @@
   "homepage": "https://github.com/angella-k/WebDevGroupM18#readme",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }

@@ -19,7 +19,15 @@ app.get("/headerFooter.json", (req, res) => {
 });
 
 app.get('/index.json', (req, res) => {
-  res.sendFile(path.join(__dirname, 'data', 'index.json'));
+    res.sendFile(path.join(__dirname, 'data', 'index.json'));
+});
+
+app.get('/signup.json', (req, res) => {
+    res.sendFile(path.join(__dirname, 'data', 'signup.json'));
+});
+
+app.get('/team.json', (req, res) => {
+    res.sendFile(path.join(__dirname, 'data', 'team.json'));
 });
 
 app.post("/contact", (req, res) => {
@@ -56,16 +64,16 @@ app.post("/contact", (req, res) => {
         signups = JSON.parse(data);
     }
     
-    // Add new signup data CREATE A THING TO CHECK IF THERE IS ALREADY THE SAME EMAIL
-
-    const existingEmail = signups.find((entry) => entry.email.toLowerCase() == signup.email.toLowerCase())
+    // Check if email already exists
+    const existingEmail = signups.find((entry) => entry.email.toLowerCase() === signup.email.toLowerCase());
     if (existingEmail) {
-        res.json({success: false, message: `${email} already in use!`});
+        return res.json({success: false, message: `${email} is already signed up!`});
     }
 
+    // Add new signup data
     signups.push(signup);
     
-    // Create data folder incase it isn't there
+    // Create data folder in case it isn't there
     if (!fs.existsSync("data")) {
         fs.mkdirSync("data");
     }

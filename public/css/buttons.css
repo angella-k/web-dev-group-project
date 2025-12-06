@@ -18,6 +18,7 @@ main button {
     transition: background-color 0.3s ease;
 }
 
+<<<<<<< HEAD
 main .button {
     display: inline-block;
     color: white;
@@ -38,5 +39,8 @@ main .button {
 }
 
 main button:hover, main .button:hover {
+=======
+main button:hover {
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
     background-color: var(--buttons);
 }

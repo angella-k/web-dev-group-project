@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
+=======
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
 @font-face {
     font-family: 'Archivo';
     font-style: normal;
@@ -7,9 +10,13 @@
     src: url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 }
 
+<<<<<<< HEAD
 html {
     scroll-behavior: smooth;
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
 
 .cookie-regular {
     font-family: "Cookie", cursive;
@@ -110,7 +117,11 @@ nav ul li a:hover {
     color: var(--main);
     font-weight: bold;
     font-size: 16px;
+<<<<<<< HEAD
     margin: 0 25px 0 16px;
+=======
+    margin: 0 35px 0 16px;
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -222,7 +233,10 @@ main {
 .text-section {
     color: var(--main);
     padding: 50px;
+<<<<<<< HEAD
     margin-bottom: 10px;
+=======
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
     width: 100%;
     max-width: 800px;
     display: flex;
@@ -238,6 +252,13 @@ main {
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
+=======
+.text-section p {
+    font-size: 16px;
+}
+
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
 .goals-section {
     display: flex;
     overflow: hidden;
@@ -280,20 +301,34 @@ main {
 .goal2 h2,
 .goal3 h2 {
     margin-bottom: 10px;
+<<<<<<< HEAD
     font-size: clamp(16px, 4vw, 20px);
+=======
+    font-size: clamp(18px, 4vw, 24px);
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
     color: var(--background);
     transition: font-size 0.6s ease, opacity 0.6s ease, color 0.6s ease;
 }
 
+<<<<<<< HEAD
 .goal1 a,
 .goal2 a,
 .goal3 a {
+=======
+.goal1 button,
+.goal2 button,
+.goal3 button {
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /*Hides the text and the button if it isn't the thing being hovered*/
 .goals-section:hover h2,
+<<<<<<< HEAD
 .goals-section:hover a {
+=======
+.goals-section:hover button {
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
     opacity: 0;
 }
 
@@ -310,6 +345,7 @@ main {
 .goals-section .goal1:hover h2,
 .goals-section .goal2:hover h2,
 .goals-section .goal3:hover h2 {
+<<<<<<< HEAD
     font-size: clamp(20px, 6vw, 25px);
     color: white;
     opacity: 1;
@@ -319,6 +355,17 @@ main {
 .goals-section .goal3:hover a {
     opacity: 1;
     transform: scale(1.05);
+=======
+    font-size: clamp(32px, 6vw, 48px);
+    color: white;
+    opacity: 1;
+}
+.goals-section .goal1:hover button,
+.goals-section .goal2:hover button,
+.goals-section .goal3:hover button {
+    opacity: 1;
+    transform: scale(1.15);
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
 }
 
 footer {
@@ -445,9 +492,15 @@ footer {
     .goals-section:hover .goal1 h2,
     .goals-section:hover .goal2 h2,
     .goals-section:hover .goal3 h2,
+<<<<<<< HEAD
     .goals-section:hover .goal1 a,
     .goals-section:hover .goal2 a,
     .goals-section:hover .goal3 a {
+=======
+    .goals-section:hover .goal1 button,
+    .goals-section:hover .goal2 button,
+    .goals-section:hover .goal3 button {
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
         opacity: 1;
     }
 
@@ -466,9 +519,15 @@ footer {
         color: var(--background);
     }
 
+<<<<<<< HEAD
     .goals-section .goal1:hover a,
     .goals-section .goal2:hover a,
     .goals-section .goal3:hover a {
+=======
+    .goals-section .goal1:hover button,
+    .goals-section .goal2:hover button,
+    .goals-section .goal3:hover button {
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
         transform: scale(1);
     }
 

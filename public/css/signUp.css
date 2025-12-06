@@ -56,8 +56,11 @@ form textarea {
 
 form textarea {
     resize: vertical;
+<<<<<<< HEAD
     max-height: 200px;
     min-height: 35px;
+=======
+>>>>>>> e5243c5e27a5a70ba45b7442fb743e37cb3da1aa
 }
 
 form input:valid:not(:placeholder-shown),

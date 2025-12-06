@@ -10,7 +10,7 @@ main {
     padding: 0;
 }
 
-.banner-section {
+.banner1-section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ main {
     
 }
 
-.banner-section::before {
+.banner1-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@ main {
     z-index: 1;
 }
 
-.banner-section h1 {
+.banner1-section h1 {
     color: white;
     font-size: 48px;
     margin-bottom: 30px;
@@ -45,11 +45,11 @@ main {
     z-index: 2;
 }
 
-.banner-image {
+.banner1-image {
     display: none;
 }
 
-.banner-button {
+.banner1-button {
     background-color: var(--buttons);
     color: var(--main);
     border: none;
@@ -62,7 +62,7 @@ main {
     border-radius: 20px;
 }
 
-.banner-button:hover {
+.banner1-button:hover {
     background-color: var(--tertiary);
     color: white;
 }

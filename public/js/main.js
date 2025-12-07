@@ -38,11 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
 
             const logo = document.querySelector('.logo-text');
-            const logoImg = logo.querySelector('.logo');
             const logoText = logo.querySelector('.logo-name');
 
             logo.href = data.logo.url;
-            logoImg.src = data.logo.src;
+
+            const logoImg = document.createElement('img');
+            logoImg.src = data.logo.image.src;
+            logoImg.alt = data.logo.image.alt;
+            logoImg.classList.add(data.logo.image.class);
+
+            logo.insertBefore(logoImg, logoText);
             logoText.textContent = data.logo.text;
 
             const dropbtn = document.querySelector('.dropbtn');
@@ -75,8 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Footer
 
-            const title = document.querySelector(".footer-title");
-            title.textContent = data.footer;
+            const footerTop = document.querySelector(".footertop");
+
+            const footerTitle = document.createElement("h3");
+            footerTitle.textContent = data.footer;
+
+            footerTop.prepend(footerTitle);
 
             const list = document.querySelector(".footer-links");
 
@@ -103,10 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load index.json content if on index page
 document.addEventListener('DOMContentLoaded', () => {
     const banner = document.querySelector('.banner');
-    
+
     // Only run this on index page
     if (!banner) return;
-    
+
     fetch('/index.json')
         .then(response => response.json())
         .then(data => {
@@ -121,9 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
             banner.appendChild(bannerTitle);
             banner.appendChild(bannerText);
 
-            const bannerImage = document.querySelector('.image');
-            bannerImage.src = data.banner.image.src;
-            bannerImage.alt = data.banner.image.alt;
+            const bannerImageContainer = document.querySelector('.banner-image');
+
+            const img = document.createElement('img');
+            img.src = data.banner.image.src;
+            img.alt = data.banner.image.alt;
+
+            bannerImageContainer.append(img);
 
             // loading in json content for text section
             const textSection = document.querySelector('.text-section');
@@ -163,43 +176,43 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load signup.json content if on signup page
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
-    
+
     // Only run this on signup page
     if (!signupForm) return;
-    
+
     fetch('/signup.json')
         .then(response => response.json())
         .then(data => {
-            
+
             // Title and description
             const textSection = document.querySelector('.text-section');
             const title = textSection.querySelector('h2');
             const description = textSection.querySelector('p');
-            
+
             title.textContent = data.signup.title;
             description.textContent = data.signup.description;
-            
+
             // Form labels
             const firstNameLabel = document.querySelector('label[for="firstName"]');
             firstNameLabel.textContent = data.signup.form.labels.firstName.label;
-            
+
             const lastNameLabel = document.querySelector('label[for="lastName"]');
             lastNameLabel.textContent = data.signup.form.labels.lastName.label;
-            
+
             const emailLabel = document.querySelector('label[for="email"]');
             emailLabel.textContent = data.signup.form.labels.email.label;
-            
+
             const messageLabel = document.querySelector('label[for="comments"]');
             messageLabel.textContent = data.signup.form.labels.message.label;
-            
+
             // Textarea
             const commentsTextarea = document.getElementById('comments');
             commentsTextarea.placeholder = data.signup.form.labels.message.placeholder;
-            
+
             // Submit button
             const submitButton = signupForm.querySelector('button[type="submit"]');
             submitButton.textContent = data.signup.form.button;
-            
+
         })
         .catch(error => console.error('Error fetching signup data:', error));
 });
@@ -207,85 +220,85 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load team.json content if on team page
 document.addEventListener('DOMContentLoaded', () => {
     const banner1Section = document.querySelector('.banner1-section');
-    
+
     // Only run this on team page
     if (!banner1Section) return;
-    
+
     fetch('/team.json')
         .then(response => response.json())
         .then(data => {
-            
+
             // Banner section
             const banner1Title = banner1Section.querySelector('h1');
             const banner1Button = banner1Section.querySelector('.banner1-button');
-            
+
             banner1Title.textContent = data.banner1.title;
             banner1Button.textContent = data.banner1.buttonText;
-            
+
             // Background image
             banner1Section.style.backgroundImage = `url('${data.banner1.image}')`;
-            
+
             // Section 1
             const section1 = document.querySelector('.content-section-1');
             const section1Heading = section1.querySelector('h2');
             const section1Text = section1.querySelector('p');
-            
+
             section1Heading.textContent = data.section1.heading;
             section1Text.textContent = data.section1.text;
-            
+
             // Team section
             const section2 = document.querySelector('.content-section-2');
             const section2Heading = section2.querySelector('h2');
             const teamGrid = section2.querySelector('.team-grid');
-            
+
             section2Heading.textContent = data.section2.heading;
-            
+
             data.section2.members.forEach(member => {
                 const memberDiv = document.createElement('div');
                 memberDiv.classList.add('team-member');
-                
+
                 const memberName = document.createElement('h3');
                 memberName.textContent = member.name;
-                
+
                 const memberDesc = document.createElement('p');
                 memberDesc.textContent = member.description;
-                
+
                 const memberImage = document.createElement('img');
                 memberImage.src = member.image;
                 memberImage.alt = member.name;
                 memberImage.classList.add('team-member-image');
-                
+
                 memberDiv.appendChild(memberName);
                 memberDiv.appendChild(memberDesc);
                 memberDiv.appendChild(memberImage);
                 teamGrid.appendChild(memberDiv);
             });
-            
+
             // signup section
             const signupContent = document.querySelector('.signup-content');
             const signupHeading = signupContent.querySelector('h2');
             const signupText = signupContent.querySelector('p');
             const signupButton = document.querySelector('.signup-button');
-            
+
             signupHeading.textContent = data.signup.heading;
             signupText.textContent = data.signup.text;
             signupButton.textContent = data.signup.buttonText;
             signupButton.onclick = () => window.location.href = data.signup.buttonUrl;
-            
+
             // Resources section
             const resourcesContent = document.querySelector('.resources-content');
             const resourcesHeading = resourcesContent.querySelector('h2');
             const resourcesText = resourcesContent.querySelector('p');
             const resourcesButton = resourcesContent.querySelector('.resources-button');
             const resourcesImage = document.querySelector('.resources-image');
-            
+
             resourcesHeading.textContent = data.resources.heading;
             resourcesText.textContent = data.resources.text;
             resourcesButton.textContent = data.resources.buttonText;
             resourcesButton.onclick = () => window.open(data.resources.buttonUrl, '_blank');
             resourcesImage.src = data.resources.image;
             resourcesImage.alt = data.resources.heading;
-            
+
         })
         .catch(error => console.error('Error fetching team data:', error));
 });

@@ -335,16 +335,18 @@ if (myForm) {
 }
 
 //Temp goals java
-{document.addEventListener('DOMContentLoaded', () => {
-    const body = document.getElementById("#goalpage");
-    const gender = document.getElementById("#gender");
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.getElementById("goalpage");
+    const gender = document.getElementById("gender");
+    
 
     //goal page js
     if (body) {
-    if (gender){
+    
     fetch('/goals.json')
         .then(response => response.json())
         .then(data => {
+            if (gender){
             //intro gender.html
             const intro = data.intro1
             const title1 = intro.title
@@ -359,7 +361,7 @@ if (myForm) {
             gender.appendChild(h1Element)
             gender.appendChild(pElement)
             //why this goal matters gender.html
-            const sect1 = document.getElementById("#sect1")
+            const sect1 = document.getElementById("sect1")
             const why = data.whyThisGoalMatters1
             const whyHead = why.Heading
             const whyText = why.text
@@ -380,9 +382,65 @@ if (myForm) {
             const sect2h3 = document.createElement('h3')
             sect2h3.textContent = policyHead
             sect2.append(sect2h3)
+            
+            //Article loop
+            const articlesArray = policy.policies
+            const idArray = ["article1","article2","article3"]
+            for (let i = 0; i < articlesArray.length; i++) {
+            const artId = idArray[i]
+            const art = document.getElementById(artId)
+            const dataArt = policy.policies[i]
+            const dataArtText = dataArt.Text
+            const dataArtImg = dataArt.image
+            const dataArtAlt = dataArt.alt
+            const artText = document.createElement('p')
+            artText.textContent = dataArtText 
+            const artImg = document.createElement('img')
+            artImg.setAttribute("src",dataArtImg)
+            artImg.setAttribute("alt",dataArtAlt)
 
-            //articles gender.html
-            const art1 = document.getElementById("#article1")
+            art.append(artText)
+            art.append(artImg)
+            }
+
+            
+
+            //additional resources gender.html
+            const sect3 = document.getElementById("sect3")
+            const resource = data.additionalResources1
+            const resourceHead = resource.Heading
+            const resourceText = resource.text
+            const resourceLink = resource.link
+            const resourceURL = resourceLink.url
+            const resourceLabel = resourceLink.label
+
+            const sect3h3 = document.createElement('h3')
+            sect3h3.textContent = resourceHead
+            const sect3p = document.createElement('p')
+            sect3p.textContent = resourceText
+
+            const sect3a = document.createElement('a')
+            sect3a.setAttribute("href",resourceURL)
+            sect3a.textContent = resourceLabel
+
+            sect3.append(sect3h3)
+            sect3.append(sect3p)
+            sect3.append(sect3a)}
+
+        //next goal page here
+
+
+
+    })
+    .catch(err => console.error("Fetch error:", err))
+
+
+
+
+}});
+
+/*articles gender.html
+            const art1 = document.getElementById("article1")
             const dataArt1 = policy.policies[0]
             const artText1 = dataArt1.text
             const artImg1 = dataArt1.image
@@ -396,7 +454,7 @@ if (myForm) {
             art1.append(art1Text)
             art1.append(art1Img)
 
-            const art2 = document.getElementById("#article2")
+            const art2 = document.getElementById("article2")
             const dataArt2 = policy.policies[1]
             const artText2 = dataArt2.text
             const artImg2 = dataArt2.image
@@ -410,7 +468,7 @@ if (myForm) {
             art2.append(art2Text)
             art2.append(art2Img)
 
-            const art3 = document.getElementById("#article3")
+            const art3 = document.getElementById("article3")
             const dataArt3 = policy.policies[2]
             const artText3 = dataArt3.text
             const artImg3 = dataArt3.image
@@ -422,32 +480,4 @@ if (myForm) {
             art3Img.setAttribute("alt",artAlt3)
 
             art3.append(art3Text)
-            art3.append(art3Img)
-
-            //additional resources gender.html
-            const sect3 = getElementById("#sect3")
-            const resource = data.additionalResources1
-            const resourceHead = resource.Heading
-            const resourceText = resource.text
-            const resourceLink = resource.link
-            const resourceURL = resource.url
-            const resourceLabel = resource.label
-
-            const sect3h3 = document.createElement('h3')
-            sect3h3.textContent = resourceHead
-            const sect3p = document.createElement('p')
-            sect3p.textcontent = resourceText
-
-            const sect3a = document.createElement('a')
-            sect3a.setAttribute("href",resourceURL)
-            sect3a.textContent = resourceLabel
-
-            sect3.append(sect3h3)
-            sect3.append(sect3p)
-            sect3.append(sect3a)
-
-
-
-        })
-    .catch(err => console.error("Fetch error:", err))
-}}})};
+            art3.append(art3Img)*/

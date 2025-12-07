@@ -47,10 +47,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-bottom-color: #19263f;
     font-weight: bold;
-<<<<<<< HEAD
     z-index: 100;
-=======
->>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
 }
 
 a {
@@ -317,10 +314,6 @@ main {
     color: white;
     opacity: 1;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
 .goals-section .goal1:hover a,
 .goals-section .goal2:hover a,
 .goals-section .goal3:hover a {

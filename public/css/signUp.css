@@ -33,7 +33,11 @@ form {
     margin: 40px auto;
     width: 90%;
     max-width: 500px;
+<<<<<<< HEAD
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+=======
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+>>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
 }
 
 form label {

@@ -302,10 +302,13 @@ if (myForm) {
     myForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
+<<<<<<< HEAD
         // Disable submit button to prevent double submission
         const submitBtn = myForm.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
 
+=======
+>>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
         const formBody = {
             firstName: firstName.value,
             lastName: lastName.value,
@@ -325,7 +328,10 @@ if (myForm) {
             .then(response => response.json())
             .then(responseData => {
                 console.log(responseData);
+<<<<<<< HEAD
                 submitBtn.disabled = false; // Re-enable button
+=======
+>>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
                 if (responseData.success) {
                     confirmMessage.textContent = responseData.message;
                     confirmMessage.style.color = 'green';
@@ -335,9 +341,13 @@ if (myForm) {
                     confirmMessage.style.color = 'red';
                 }
             })
+<<<<<<< HEAD
             .catch(err => {
                 console.error("Fetch error:", err);
                 submitBtn.disabled = false; // Re-enable on error
             });
+=======
+            .catch(err => console.error("Fetch error:", err));
+>>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
     });
 }

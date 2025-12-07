@@ -23,7 +23,11 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92
 }
 
 .banner1-section::before {
@@ -289,4 +293,8 @@ main {
     .resources-button {
         width: 100%;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b2da409d8f88bee8398e6d0529f3ef4ed6d6bf92

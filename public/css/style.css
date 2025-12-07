@@ -101,7 +101,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    border-bottom: #75BBA0 2px solid;
+    border-bottom: #d2e9e0 2px solid;
 }
 
 .dropbtn {
@@ -314,6 +314,7 @@ main {
     color: white;
     opacity: 1;
 }
+
 .goals-section .goal1:hover a,
 .goals-section .goal2:hover a,
 .goals-section .goal3:hover a {

@@ -1,8 +1,12 @@
 {
   "logo": {
-    "src": "assets/image.png",
-    "text": "SAC",
-    "url": "index.html"
+    "url": "index.html",
+    "image": {
+      "src": "assets/image.png",
+      "alt": "SAC Logo",
+      "class": "logo"
+    },
+    "text": "SAC"
   },
   "nav": [
     {

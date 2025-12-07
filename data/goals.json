@@ -18,11 +18,13 @@
             },
             {
                 "Text":"Target 2.a focuses on increasing investment especially in rural infrastructure, agricultural research etc. as a policy maker you can ensure farmers are protected and supported.",
-                "image":""
+                "image":"",
+                "alt":""
             },
             {
                 "Text":"Target 2.c focuses on adopting measures to ensure the proper functioning of food commodity markets and their derivatives and facilitate timely access to market information, including on food reserves, in order to help limit extreme food price volatility, as a policymaker you can ensure there is adequate food reserves so that everyone in your community can access affordable food.",
-                "image":"" 
+                "image":"",
+                "alt":""
             }
         ]
     },
@@ -50,12 +52,12 @@
         "policies":[
             {
                 "Text":"Target 5.5 of the sustainable development goals is to Ensure women's full and effective participation in leadership and decision-making. As policy makers you should ensure inclusion of women and hire more women in prominent roles. You should also encourage companies and corporations to include more women in leadership roles.",               
-                "image":"",
+                "image":"assets/femaleCeo.jpg",
                 "alt":"Female CEO"
             },
             {
                 "Text":"Target 5.2 of the SDG is to end all violence against women and girls. As policy makers you have the power to protect women from violence and exploitation. You can create policies to enforce women's safety and prevent exploitation like policing dangerous areas and providing better avenues for reporting sexual crimes. This goal is especially important as in the past couple decades sexual violence against women and girls has risen significantly showing a lack of action to protect women and girls.",
-                "image":"",
+                "image":"assets/ProtestViolence.jpg",
                 "alt":"protest against sex trafficking"
             },
             {

@@ -1,0 +1,45 @@
+{
+  "banner1": {
+    "title": "Meet Our Team",
+    "image": "assets/banner.jpg",
+    "buttonText": "Team members"
+  },
+  "section1": {
+    "heading": "Our Team's Contributions",
+    "text": "Everyone in our team contributed to the creation and planning of this website equally, on this page you will be able to see our individual contributions."
+  },
+  "section2": {
+    "heading": "Team members",
+    "members": [
+      {
+        "name": "Angella Howard",
+        "description": "little paragraph about what angella contributed"
+      },
+      {
+        "name": "Leia Richards",
+        "description": "little paragraph about what leia contributed"
+      },
+      {
+        "name": "Conor Fitzgerald",
+        "description": "little paragraph about what Conor contributed"
+      },
+      {
+        "name": "Jake Cunningham",
+        "description": "little paragraph about what jake contributed"
+      }
+    ]
+  },
+  "signup": {
+    "heading": "Sign up now!",
+    "text": "Sign up to receive any updates and news about our goals.",
+    "buttonText": "Sign up",
+    "buttonUrl": "signup.html"
+  },
+  "resources": {
+    "heading": "Additional resources",
+    "text": "A dedicated group of individuals committed to promoting sustainability and environmental awareness in our community.",
+    "buttonText": "UN Page",
+    "buttonUrl": "https://sdgs.un.org/goals",
+    "image": "assets/goal2.jpg"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "logo": {
+    "src": "assets/image.png",
+    "text": "SAC",
+    "url": "index.html"
+  },
+  "nav": [
+    {
+      "type": "dropdown",
+      "label": "Goals  v",
+      "items": [
+        {
+          "text": "Sustainable Cities and Communities",
+          "url": "cities.html"
+        },
+        {
+          "text": "Zero Hunger",
+          "url": "hunger.html"
+        },
+        {
+          "text": "Gender Equality",
+          "url": "gender.html"
+        }
+      ]
+    },
+    {
+      "type": "topnav",
+      "text": "About our team",
+      "url": "team.html"
+    },
+    {
+      "type": "topnav",
+      "text": "Contact us",
+      "url": "signup.html"
+    }
+  ],
+
+  "footer": "Sustainability Advisory Committee",
+  "links": [
+    {
+      "text": "About our team",
+      "url": "team.html"
+    },
+    {
+      "text": "Contact Us",
+      "url": "signup.html"
+    },
+    {
+      "text": "Join our Newsletter",
+      "url": "signup.html"
+    },
+    {
+      "text": "United Nations Page",
+      "url": "https://sdgs.un.org/"
+    },
+    {
+      "text": "Site Guide",
+      "url": "siteguide.html"
+    }
+  ],
+  "copyright": "Copyright © 2025 Sustainability Advisory Committee, All rights reserved."
+}
+

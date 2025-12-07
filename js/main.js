@@ -375,7 +375,7 @@ if (myForm) {
             //Possible policies to make change gender.html
             const sect2 = document.getElementById("sect2")
             const policy = data.localPolicies1
-            const policyHead = policy.heading
+            const policyHead = policy.Heading
             
             const sect2h3 = document.createElement('h3')
             sect2h3.textContent = policyHead

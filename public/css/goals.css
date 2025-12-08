@@ -6,7 +6,7 @@
     --background: #EFE8F4;
 }
 
-.banner-section {
+#intro-section1 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
     
 }
 
-.banner-section::before {
+#intro-section1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -33,12 +33,109 @@
     z-index: 1;
 }
 
-.banner-section h1 {
+#intro-section1 h1 {
     color: white;
     font-size: 48px;
     margin-bottom: 30px;
     position: relative;
     z-index: 2;
+}
+
+#intro-section1 p{
+    color:white;
+    z-index:2;
+}
+#intro-section2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#intro-section2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(42, 65, 106, 0.5);
+    z-index: 1;
+}
+
+#intro-section2 h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+#intro-section2 p{
+    color:white;
+    z-index:2;
+}
+
+#intro-section3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#intro-section3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(42, 65, 106, 0.5);
+    z-index: 1;
+}
+
+#intro-section3 h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+#intro-section3 p{
+    color:white;
+    z-index:2;
+}
+
+
+#intro-section1 {
+    background-image: url('../assets/G1B.jpg');
+}
+
+#intro-section2 {
+    background-image: url('../assets/G2B.jpg');
+}
+
+#intro-section3 {
+    background-image: url('../assets/G3B.jpg');
 }
 
 .banner-image {
@@ -56,6 +153,7 @@
     position: relative;
     z-index: 2;
     border-radius: 20px;
+    margin-top:40px;
 }
 
 .banner-button:hover {
@@ -63,6 +161,23 @@
     color: white;
 }
 
+.find-out-button{
+    background-color: var(--buttons);
+    color: var(--main);
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border-radius: auto;
+    grid-column: 1; 
+    justify-self:center;
+    text-align: center; 
+    align-self: start;  
+
+}
 
 
 section {
@@ -76,6 +191,11 @@ section {
     background-color: var(--background);
     color: var(--main);
     border-radius: 10px;
+    position:relative;
+    top:0;
+
+
+
 }
 
 #sect2{
@@ -88,7 +208,26 @@ section {
     background-color:#eea4f9;
     color:white;
     border-radius: 10px;
+    display: flex;
+    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    min-height: 300px;
 }
+
+#sect3-right{
+    grid-column:2/3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#sect3-right .ar-image{
+    max-width:100%;
+    max-height:100%;
+}
+
 
 #sect2 {
     display: grid;
@@ -100,6 +239,11 @@ section {
     background: rgba(255, 255, 255, 0.1); 
     padding: 20px;
     border-radius: 10px;
+}
+#sect3 h3 {
+    grid-column: 1 / -1; 
+    text-align: left;   
+    margin-bottom: 20px;  
 }
 
 #sect2 article img {
@@ -126,6 +270,7 @@ section {
     text-decoration: none; 
     display:inline-block;
     margin:0 auto;
+    align-self: start;
 }
 
 .info-button:hover {
@@ -133,10 +278,7 @@ section {
     color: white;
 }
 
-#sect3 {
-    display: flex;
-    width: 100%;
-}
+
 
 .resources-text {
     flex: 0 0 50%;               
@@ -150,6 +292,17 @@ section {
     flex: 0 0 50%;         
 }
 
+.footerbottom{
+    padding-top:0;
+    margin-top:0;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+.footertop{
+    margin-bottom:0;
+    padding-bottom:0;
+
+}
 
 @media (max-width: 700px) {
     #sect3 {
@@ -189,5 +342,22 @@ section {
 @media (max-width: 900px) {
     #intro-section h1 {
         font-size: 36px;
+    }
+
+}
+@media (max-width: 600px) {
+    #sect2 {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 900px) {
+    #sect3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #sect3 {
+        grid-template-columns: 1fr;
     }
 }

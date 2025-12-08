@@ -1,7 +1,7 @@
 {
   "banner": {
     "title": "Importance of local sustainability",
-    "text": "Learn how our community can contribute to global sustainability efforts through local actions.",
+    "text": "Sustainability is increasingly more important as it ensures the earth is habitable for future generations and we all have a responsibility to encourage sustaiable practices. Learn how our community can contribute to global sustainability efforts through local actions.",
     "image": {
       "src": "assets/banner.jpg",
       "alt": "Sustainability Image"
@@ -9,7 +9,7 @@
   },
   "text": {
     "title": "Welcome to the Sustainability Advisory Committee",
-    "text": "The Sustainability Advisory Committee (SAC) is focused on promoting sustainable practices within the local community. We seek to raise awareness about environmental issues and encourage individuals and organizations to take action towards a more sustainable future."
+    "text": "The Sustainability Advisory Committee (SAC) is focused on promoting sustainable practices within the local community. We seek to raise awareness about environmental issues and encourage individuals and organizations to take action towards a more sustainable future. We have chosen 3 main goals from the united nations sustainability goals and you can learn more below!"
   },
   "goal1": {
     "title": "Sustainable Cities and Communities",

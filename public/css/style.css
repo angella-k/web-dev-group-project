@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    zoom: 125%;
 }
 
 .cookie-regular {
@@ -44,7 +45,7 @@ header {
     top: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 10px 30px;
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-bottom-color: #19263f;
@@ -99,11 +100,11 @@ nav ul li a {
     font-weight: bold;
     display: block;
     margin: 0 20px 0 20px;
-    border-bottom: #00000000 2px solid;
+    border-bottom: #00000000 3px solid;
 }
 
 nav ul li a:hover {
-    border-bottom: #d2e9e0 2px solid;
+    border-bottom: #a9d3c3 3px solid;
 }
 
 .dropbtn {
@@ -117,11 +118,11 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: #00000000 2px solid;
+    border-bottom: #00000000 3px solid;
 }
 
 .dropbtn:hover {
-    border-bottom: #75BBA0 2px solid;
+    border-bottom: #a9d3c3 3px solid;
 }
 
 .dropdown-goals a {
@@ -196,7 +197,7 @@ main {
     justify-content: center;
     align-items: right;
     margin: 20px 0 20px 0;
-    padding: 50px;
+    padding: 40px 80px 40px 10%;
 }
 
 .banner h1 {

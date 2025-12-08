@@ -53,6 +53,7 @@ main {
     color: var(--main);
     border: none;
     padding: 12px 30px;
+    font-weight: 400;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -71,6 +72,7 @@ main {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    margin: 0 50px 0 50px;
 }
 
 .content-section-1 h2 {
@@ -149,6 +151,10 @@ main {
     border-radius: 50px;
 }
 
+.signup-content {
+    padding: 30px;
+}
+
 .signup-content h2 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -164,6 +170,7 @@ main {
     color: white;
     border: none;
     padding: 12px 30px;
+    margin-right: 20px;
     font-size: 16px;
     cursor: pointer;
     white-space: nowrap;
@@ -180,13 +187,18 @@ main {
     background-color: white;
     padding: 60px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
+    border-radius: 10px;
 }
 
 .resources-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+}
+
+.resources-content {
+    padding-left: 40px;
 }
 
 .resources-content h2 {

@@ -1,7 +1,7 @@
 {
   "bannerTeam": {
     "title": "Meet Our Team",
-    "image": "assets/banner.jpg",
+    "image": "assets/teambanner.jpg",
     "buttonText": "Team members"
   },
   "section1": {
@@ -40,6 +40,6 @@
     "text": "A dedicated group of individuals committed to promoting sustainability and environmental awareness in our community.",
     "buttonText": "UN Page",
     "buttonUrl": "https://sdgs.un.org/goals",
-    "image": "assets/goal2.jpg"
+    "image": "assets/team.jpg"
   }
 }

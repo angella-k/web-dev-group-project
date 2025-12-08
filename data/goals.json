@@ -13,35 +13,42 @@
         "policies":[
             {
                 "Text":"Target 2.1 states that by 2030 the aim is to end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round. As a policy maker you play a significant role in determining funding for food banks, a heavily relied on resource, by allocating more funding you can make sure less children go hungry in your local area.",
-                "image":"",
+                "image":"assets/G2T1.jpg",
                 "alt":""
             },
             {
                 "Text":"Target 2.a focuses on increasing investment especially in rural infrastructure, agricultural research etc. as a policy maker you can ensure farmers are protected and supported.",
-                "image":"",
+                "image":"assets/G2T2.jpg",
                 "alt":""
             },
             {
                 "Text":"Target 2.c focuses on adopting measures to ensure the proper functioning of food commodity markets and their derivatives and facilitate timely access to market information, including on food reserves, in order to help limit extreme food price volatility, as a policymaker you can ensure there is adequate food reserves so that everyone in your community can access affordable food.",
-                "image":"",
+                "image":"assets/G2T3.jpg",
                 "alt":""
             }
         ]
     },
     "additionalResources":{
         "Heading":"Additional Resources",
-        "text":"",
+        "text":"On the global goals website you can find many organisations to help make change",
         "link":{
             "url":"https://sdgs.un.org/goals/goal2",
             "label":"Find out more"
         }
+
+        
     },
+    "arImage":{
+    "image":"assets/AdditionalResources.jpg",
+    "alt":"bookshelf"},
 
 
 
     "intro1":{
         "title":"Gender Equality",
-        "Description":"The third sustainable goal we have chosen is to achieve gender equality and empower all women and girls."
+        "Description":"The third sustainable goal we have chosen is to achieve gender equality and empower all women and girls.",
+        "buttonText":"Find out more"
+
     },
     "whyThisGoalMatters1":{
         "Heading":"Why this goal matters",
@@ -52,18 +59,18 @@
         "policies":[
             {
                 "Text":"Target 5.5 of the sustainable development goals is to Ensure women's full and effective participation in leadership and decision-making. As policy makers you should ensure inclusion of women and hire more women in prominent roles. You should also encourage companies and corporations to include more women in leadership roles.",               
-                "image":"assets/femaleCeo.jpg",
-                "alt":"Female CEO"
+                "image":"assets/G3T1.jpg",
+                "alt":""
             },
             {
                 "Text":"Target 5.2 of the SDG is to end all violence against women and girls. As policy makers you have the power to protect women from violence and exploitation. You can create policies to enforce women's safety and prevent exploitation like policing dangerous areas and providing better avenues for reporting sexual crimes. This goal is especially important as in the past couple decades sexual violence against women and girls has risen significantly showing a lack of action to protect women and girls.",
-                "image":"assets/ProtestViolence.jpg",
-                "alt":"protest against sex trafficking"
+                "image":"assets/G3T2.jpg",
+                "alt":""
             },
             {
                 "Text":"Target 5.3 of the sustainable development goals is to eliminate forced marriages and any other harmful practices such as female genital mutilation. While this isn't an issue local to your area it is still important that you take part in action to help get rid of these practices world wide as they are still prevalent issues in many parts of the world. As a policy maker you could help push for initiatives to raise awareness and help facilitate charity functions in your area. You could also push for legislation that criminalises taking women children abroad to countries where it is legal to force them to marry.",
-                "image":"",
-                "alt":"protest against forced child marriages"
+                "image":"assets/G3T3.jpg",
+                "alt":""
             }
         ]
     },
@@ -92,21 +99,21 @@
         "policies":[
             {
                 "Text":"Target 11.1 of the sustainable cities and communities goal states that by 2030 we should have ensured that all have access to adequate, safe and affordable housing and basic services. As policy makers you have the power to push through legislation in your local area that combats homelessness and inadequate housing.",
-                "image":""
+                "image":"assets/G1T1.jpg"
             },
             {
                 "Text":"Target 11.4 of the sustainable cities and communities goal is to strengthen efforts to protect and safegaurd the world's cultural and natural heritage. As a policy maker you have the power to ensure nobody's culture or heritage is threatened, you can do this by encouraging education in schools on the topic and holding fundraising events to fund the protection of world heritage sites. ",
-                "image":""
+                "image":"assets/G1T2.jpg"
             },
             {
                 "Text":"Target 11.6 of the sustainable cities and communities goal is to by 2030, reduce the adverse per capita environmental impact of cities, including by paying specicial attention to air quality and municipal and other waste management, as a policy maker you can encourage legislation and education on recycling and its importance to ensure responsible waste management.",
-                "image":"" 
+                "image":"assets/G1T3.jpg" 
             }
         ]
     },
     "additionalResources2":{
         "Heading":"Additional Resources",
-        "text":"",
+        "text":"On the global goals website you can find many organisations to help make change",
         "link":{
             "url":"https://sdgs.un.org/goals/goal11/",
             "label":"Find out more"

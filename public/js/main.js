@@ -367,20 +367,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (page.includes("gender.html")) {
 
                 //intro gender.html
-                const introSection = document.getElementById("intro-section");
+                const introSection = document.getElementById("intro-section3");
 
                 const intro = data.intro1
                 const title1 = intro.title
                 const introText = intro.Description
+                const introbutton = intro.buttonText
 
                 const h1Element = document.createElement('h1')
                 h1Element.textContent = title1
 
                 const pElement = document.createElement('p')
                 pElement.textContent = introText
+                const buttonElement = document.createElement('button')
+                buttonElement.setAttribute("class", "banner-button")
+                buttonElement.setAttribute("onclick", "location.href='#sect1'")
+                buttonElement.textContent = introbutton
 
                 introSection.appendChild(h1Element)
                 introSection.appendChild(pElement)
+                introSection.appendChild(buttonElement)
 
                 //why this goal matters gender.html
                 const sect1 = document.getElementById("sect1")
@@ -398,12 +404,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //Possible policies to make change gender.html
                 const sect2 = document.getElementById("sect2")
+                const articles = document.getElementById("article1")
                 const policy = data.localPolicies1
                 const policyHead = policy.Heading
 
                 const sect2h3 = document.createElement('h3')
                 sect2h3.textContent = policyHead
-                sect2.append(sect2h3)
+                sect2.insertBefore(sect2h3, articles)
 
                 //Article loop
                 const articlesArray = policy.policies
@@ -427,25 +434,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //additional resources gender.html
                 const sect3 = document.getElementById("sect3")
+                const sect3left = document.getElementById("sect3-left")
+                const sect3right = document.getElementById("sect3-right")
                 const resource = data.additionalResources1
                 const resourceHead = resource.Heading
                 const resourceText = resource.text
                 const resourceLink = resource.link
                 const resourceURL = resourceLink.url
                 const resourceLabel = resourceLink.label
+                const bookshelfImage = data.arImage.image
+                const bookshelfAlt = data.arImage.alt
 
                 const sect3h3 = document.createElement('h3')
                 sect3h3.textContent = resourceHead
                 const sect3p = document.createElement('p')
                 sect3p.textContent = resourceText
 
-                const sect3a = document.createElement('a')
+                const sect3a = document.createElement('button')
                 sect3a.setAttribute("href", resourceURL)
+                sect3a.setAttribute("class","find-out-button")  
                 sect3a.textContent = resourceLabel
 
-                sect3.append(sect3h3)
-                sect3.append(sect3p)
-                sect3.append(sect3a)
+                const arImg = document.createElement('img')
+                arImg.setAttribute("src", bookshelfImage)
+                arImg.setAttribute("alt", bookshelfAlt)
+                arImg.setAttribute("class","ar-image")
+
+                sect3left.append(sect3h3)
+                sect3left.append(sect3p)
+                sect3left.append(sect3a)
+                sect3right.append(arImg)
             }
 
 
@@ -453,20 +471,26 @@ document.addEventListener('DOMContentLoaded', () => {
             // ---------------- HUNGER PAGE ----------------
             if (page.includes("hunger.html")) {
 
-                const introSection = document.getElementById("intro-section");
+                const introSection = document.getElementById("intro-section2");
 
                 const intro = data.intro
                 const title1 = intro.title
                 const introText = intro.Description
+                const introbutton = intro.buttonText
 
                 const h1Element = document.createElement('h1')
                 h1Element.textContent = title1
 
                 const pElement = document.createElement('p')
                 pElement.textContent = introText
+                const buttonElement = document.createElement('button')
+                buttonElement.setAttribute("class", "banner-button")
+                buttonElement.setAttribute("onclick", "location.href='#sect1'")
+                buttonElement.textContent = introbutton
 
                 introSection.appendChild(h1Element)
                 introSection.appendChild(pElement)
+                introSection.appendChild(buttonElement)
 
                 //why this goal matters hunger.html
                 const sect1 = document.getElementById("sect1")
@@ -484,12 +508,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //Possible policies to make change hunger.html
                 const sect2 = document.getElementById("sect2")
+                const articles = document.getElementById("article1")
                 const policy = data.localPolicies
                 const policyHead = policy.Heading
 
                 const sect2h3 = document.createElement('h3')
                 sect2h3.textContent = policyHead
-                sect2.append(sect2h3)
+                sect2.insertBefore(sect2h3,articles)
+
+                //article loop
 
                 const articlesArray = policy.policies
                 const idArray = ["article1", "article2", "article3"]
@@ -512,45 +539,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //additional resources hunger.html
                 const sect3 = document.getElementById("sect3")
+                const sect3left = document.getElementById("sect3-left")
+                const sect3right = document.getElementById("sect3-right")
                 const resource = data.additionalResources1
                 const resourceHead = resource.Heading
                 const resourceText = resource.text
                 const resourceLink = resource.link
                 const resourceURL = resourceLink.url
                 const resourceLabel = resourceLink.label
+                const bookshelfImage = data.arImage.image
+                const bookshelfAlt = data.arImage.alt
 
                 const sect3h3 = document.createElement('h3')
                 sect3h3.textContent = resourceHead
                 const sect3p = document.createElement('p')
                 sect3p.textContent = resourceText
 
-                const sect3a = document.createElement('a')
+                const sect3a = document.createElement('button')
                 sect3a.setAttribute("href", resourceURL)
+                sect3a.setAttribute("class","find-out-button")
                 sect3a.textContent = resourceLabel
 
-                sect3.append(sect3h3)
-                sect3.append(sect3p)
-                sect3.append(sect3a)
+                const arImg = document.createElement('img')
+                arImg.setAttribute("src", bookshelfImage)
+                arImg.setAttribute("alt", bookshelfAlt)
+                arImg.setAttribute("class","ar-image")
 
-                //next goal page here
+                sect3left.append(sect3h3)
+                sect3left.append(sect3p)
+                sect3left.append(sect3a)
+                sect3right.append(arImg)
+
+                
             }
 
             if (page.includes("cities.html")) {
 
-                  const introSection = document.getElementById("intro-section");
+                const introSection = document.getElementById("intro-section1");
 
                 const intro = data.intro2
                 const title1 = intro.title
                 const introText = intro.Description
+                const introbutton = intro.buttonText
 
                 const h1Element = document.createElement('h1')
                 h1Element.textContent = title1
 
                 const pElement = document.createElement('p')
                 pElement.textContent = introText
+                const buttonElement = document.createElement('button')
+                buttonElement.setAttribute("class", "banner-button")
+                buttonElement.setAttribute("onclick", "location.href='#sect1'")
+                buttonElement.textContent = introbutton
 
                 introSection.appendChild(h1Element)
                 introSection.appendChild(pElement)
+                introSection.appendChild(buttonElement)
+
                 //why this goal matters cities.html
                 const sect1 = document.getElementById("sect1")
                 const why = data.whyThisGoalMatters2
@@ -567,14 +612,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //Possible policies to make change cities.html
                 const sect2 = document.getElementById("sect2")
+                const articles = document.getElementById("article1")
                 const policy = data.localPolicies2
                 const policyHead = policy.Heading
 
                 const sect2h3 = document.createElement('h3')
                 sect2h3.textContent = policyHead
-                sect2.append(sect2h3)
+                sect2.insertBefore(sect2h3, articles)
 
                 //Article loop
+                
                 const articlesArray = policy.policies
                 const idArray = ["article1", "article2", "article3"]
                 for (let i = 0; i < articlesArray.length; i++) {
@@ -596,25 +643,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //additional resources cities.html
                 const sect3 = document.getElementById("sect3")
+                const sect3left = document.getElementById("sect3-left")
+                const sect3right = document.getElementById("sect3-right")
                 const resource = data.additionalResources2
                 const resourceHead = resource.Heading
                 const resourceText = resource.text
                 const resourceLink = resource.link
                 const resourceURL = resourceLink.url
                 const resourceLabel = resourceLink.label
+                const bookshelfImage = data.arImage.image
+                const bookshelfAlt = data.arImage.alt
 
                 const sect3h3 = document.createElement('h3')
                 sect3h3.textContent = resourceHead
                 const sect3p = document.createElement('p')
                 sect3p.textContent = resourceText
 
-                const sect3a = document.createElement('a')
+                const sect3a = document.createElement('button')
                 sect3a.setAttribute("href", resourceURL)
+                sect3a.setAttribute("class","find-out-button")
                 sect3a.textContent = resourceLabel
 
-                sect3.append(sect3h3)
-                sect3.append(sect3p)
-                sect3.append(sect3a)
+                const arImg = document.createElement('img')
+                arImg.setAttribute("src", bookshelfImage)
+                arImg.setAttribute("alt", bookshelfAlt)
+                arImg.setAttribute("class","ar-image")
+
+                sect3left.append(sect3h3)
+                sect3left.append(sect3p)
+                sect3left.append(sect3a)
+                sect3right.append(arImg)
             }
         })
 

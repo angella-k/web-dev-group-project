@@ -10,7 +10,7 @@ main {
     padding: 0;
 }
 
-.banner1-section {
+.bannerTeam-section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,10 +23,9 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
 
-.banner1-section::before {
+.bannerTeam-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -37,7 +36,7 @@ main {
     z-index: 1;
 }
 
-.banner1-section h1 {
+.bannerTeam-section h1 {
     color: white;
     font-size: 48px;
     margin-bottom: 30px;
@@ -45,11 +44,11 @@ main {
     z-index: 2;
 }
 
-.banner1-image {
+.bannerTeam-image {
     display: none;
 }
 
-.banner1-button {
+.bannerTeam-button {
     background-color: var(--buttons);
     color: var(--main);
     border: none;
@@ -62,7 +61,7 @@ main {
     border-radius: 20px;
 }
 
-.banner1-button:hover {
+.bannerTeam-button:hover {
     background-color: var(--tertiary);
     color: white;
 }
@@ -227,7 +226,7 @@ main {
 }
 
 @media (max-width: 900px) {
-    .banner-section h1 {
+    .bannerTeam-section h1 {
         font-size: 36px;
     }
 
@@ -248,11 +247,11 @@ main {
 }
 
 @media (max-width: 700px) {
-    .banner-section {
+    .bannerTeam-section {
         padding: 80px 15px;
     }
 
-    .banner-section h1 {
+    .bannerTeam-section h1 {
         font-size: 28px;
     }
 

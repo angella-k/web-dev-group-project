@@ -219,25 +219,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load team.json content if on team page
 document.addEventListener('DOMContentLoaded', () => {
-    const banner1Section = document.querySelector('.banner1-section');
-
+    const bannerTeamSection = document.querySelector('.bannerTeam-section');
+    
     // Only run this on team page
-    if (!banner1Section) return;
-
+    if (!bannerTeamSection) return;
+    
     fetch('/team.json')
         .then(response => response.json())
         .then(data => {
 
             // Banner section
-            const banner1Title = banner1Section.querySelector('h1');
-            const banner1Button = banner1Section.querySelector('.banner1-button');
-
-            banner1Title.textContent = data.banner1.title;
-            banner1Button.textContent = data.banner1.buttonText;
-
+            const bannerTeamTitle = bannerTeamSection.querySelector('h1');
+            const bannerTeamButton = bannerTeamSection.querySelector('.bannerTeam-button');
+            
+            bannerTeamTitle.textContent = data.bannerTeam.title;
+            bannerTeamButton.textContent = data.bannerTeam.buttonText;
+            
             // Background image
-            banner1Section.style.backgroundImage = `url('${data.banner1.image}')`;
-
+            bannerTeamSection.style.backgroundImage = `url('${data.bannerTeam.image}')`;
+            
             // Section 1
             const section1 = document.querySelector('.content-section-1');
             const section1Heading = section1.querySelector('h2');
@@ -315,6 +315,10 @@ if (myForm) {
     myForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
+        // Disable submit button to prevent double submission
+        const submitBtn = myForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+
         const formBody = {
             firstName: firstName.value,
             lastName: lastName.value,
@@ -334,6 +338,7 @@ if (myForm) {
             .then(response => response.json())
             .then(responseData => {
                 console.log(responseData);
+                submitBtn.disabled = false; // Re-enable button
                 if (responseData.success) {
                     confirmMessage.textContent = responseData.message;
                     confirmMessage.style.color = 'green';
@@ -343,7 +348,10 @@ if (myForm) {
                     confirmMessage.style.color = 'red';
                 }
             })
-            .catch(err => console.error("Fetch error:", err));
+            .catch(err => {
+                console.error("Fetch error:", err);
+                submitBtn.disabled = false; // Re-enable on error
+            });
     });
 }
 

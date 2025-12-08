@@ -23,8 +23,8 @@ main .button {
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    border:#67a48d;
-    border-style:groove;
+    border: #67a48d;
+    border-style: groove;
     font-weight: bold;
     text-align: center;
     background-color: #75bba088;
@@ -33,10 +33,10 @@ main .button {
     margin: 0 20%;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-
+    transition: background-color 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
-main button:hover, main .button:hover {
+main button:hover,
+main .button:hover {
     background-color: var(--buttons);
 }

@@ -11,8 +11,9 @@ main button {
     color: white;
     border-color: var(--buttons);
     padding: 10px 0;
-    margin: 0 20%;
+    margin: 0 30%;
     border-radius: 5px;
+    border-style: groove;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
@@ -22,9 +23,8 @@ main .button {
     display: inline-block;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 10px;
     border: #67a48d;
-    border-style: groove;
     font-weight: bold;
     text-align: center;
     background-color: #75bba088;

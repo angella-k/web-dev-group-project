@@ -65,39 +65,6 @@
 
 
 
-
-@media (max-width: 900px) {
-    .banner-section h1 {
-        font-size: 36px;
-    }
-
-
-}
-
-@media (max-width: 700px) {
-    .banner-section {
-        padding: 80px 15px;
-    }
-
-    .banner-section h1 {
-        font-size: 28px;
-    }
-
-    .section1,
-    .section2,
-    .section3{
-        padding: 40px 15px;
-    }
-
-    .section1 h3,
-    .section2 h3,
-    .section3 h3 {
-        font-size: 24px;
-    }
-
-
-}
-
 section {
     width: 100%;
     padding: 40px 20px; 
@@ -105,45 +72,43 @@ section {
     box-sizing: border-box;
 }
 
-
-
-
-.section1{
+#sect1{
     background-color: var(--background);
     color: var(--main);
     border-radius: 10px;
 }
 
-.section2{
+#sect2{
     background-color: #9f77bb;
     color: white;
     border-radius: 10px; 
 }
 
-.section3{
+#sect3{
     background-color:#eea4f9;
     color:white;
     border-radius: 10px;
 }
 
-.section2 {
+#sect2 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
-.section2 article {
+
+#sect2 article {
     background: rgba(255, 255, 255, 0.1); 
     padding: 20px;
     border-radius: 10px;
 }
 
-.section2 article img {
+#sect2 article img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.section2 h3 {
+#sect2 h3 {
     grid-column: 1 / -1; 
     text-align: left;   
     margin-bottom: 20px;  
@@ -168,7 +133,7 @@ section {
     color: white;
 }
 
-.section3 {
+#sect3 {
     display: flex;
     width: 100%;
 }
@@ -187,7 +152,7 @@ section {
 
 
 @media (max-width: 700px) {
-    .section3 {
+    #sect3 {
         flex-direction: column;
     }
 
@@ -199,5 +164,30 @@ section {
         padding-left: 0;
         text-align: center;       
     }
+
+    #intro-section {
+        padding: 80px 15px;
+    }
+
+    #intro-section h1 {
+        font-size: 28px;
+    }
+
+    #sect1,
+    #sect2,
+    #sect3{
+        padding: 40px 15px;
+    }
+
+    #sect1 h3,
+    #sect2 h3,
+    #sect3 h3 {
+        font-size: 24px;
+    }
 }
 
+@media (max-width: 900px) {
+    #intro-section h1 {
+        font-size: 36px;
+    }
+}

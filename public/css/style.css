@@ -37,9 +37,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 header {
     display: flex;
-    position: relative;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
@@ -47,6 +49,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-bottom-color: #19263f;
     font-weight: bold;
+    z-index: 100;
 }
 
 a {
@@ -100,7 +103,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    border-bottom: #75BBA0 2px solid;
+    border-bottom: #d2e9e0 2px solid;
 }
 
 .dropbtn {
@@ -313,6 +316,7 @@ main {
     color: white;
     opacity: 1;
 }
+
 .goals-section .goal1:hover a,
 .goals-section .goal2:hover a,
 .goals-section .goal3:hover a {
@@ -365,7 +369,7 @@ footer {
 @media (max-width: 700px) {
 
     header {
-        position: relative;
+        position: sticky;
     }
 
     nav {

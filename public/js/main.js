@@ -354,3 +354,269 @@ if (myForm) {
             });
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    fetch('/goals.json')
+        .then(response => response.json())
+        .then(data => {
+
+            var page = window.location.pathname;
+
+            // ---------------- GENDER PAGE ----------------
+            if (page.includes("gender.html")) {
+
+                //intro gender.html
+                const introSection = document.getElementById("intro-section");
+
+                const intro = data.intro1
+                const title1 = intro.title
+                const introText = intro.Description
+
+                const h1Element = document.createElement('h1')
+                h1Element.textContent = title1
+
+                const pElement = document.createElement('p')
+                pElement.textContent = introText
+
+                introSection.appendChild(h1Element)
+                introSection.appendChild(pElement)
+
+                //why this goal matters gender.html
+                const sect1 = document.getElementById("sect1")
+                const why = data.whyThisGoalMatters1
+                const whyHead = why.Heading
+                const whyText = why.text
+
+                const sect1h3 = document.createElement('h3')
+                sect1h3.textContent = whyHead
+                const sect1Text = document.createElement('p')
+                sect1Text.textContent = whyText
+
+                sect1.append(sect1h3)
+                sect1.append(sect1Text)
+
+                //Possible policies to make change gender.html
+                const sect2 = document.getElementById("sect2")
+                const policy = data.localPolicies1
+                const policyHead = policy.Heading
+
+                const sect2h3 = document.createElement('h3')
+                sect2h3.textContent = policyHead
+                sect2.append(sect2h3)
+
+                //Article loop
+                const articlesArray = policy.policies
+                const idArray = ["article1", "article2", "article3"]
+                for (let i = 0; i < articlesArray.length; i++) {
+                    const artId = idArray[i]
+                    const art = document.getElementById(artId)
+                    const dataArt = policy.policies[i]
+                    const dataArtText = dataArt.Text
+                    const dataArtImg = dataArt.image
+                    const dataArtAlt = dataArt.alt
+                    const artText = document.createElement('p')
+                    artText.textContent = dataArtText
+                    const artImg = document.createElement('img')
+                    artImg.setAttribute("src", dataArtImg)
+                    artImg.setAttribute("alt", dataArtAlt)
+
+                    art.append(artText)
+                    art.append(artImg)
+                }
+
+                //additional resources gender.html
+                const sect3 = document.getElementById("sect3")
+                const resource = data.additionalResources1
+                const resourceHead = resource.Heading
+                const resourceText = resource.text
+                const resourceLink = resource.link
+                const resourceURL = resourceLink.url
+                const resourceLabel = resourceLink.label
+
+                const sect3h3 = document.createElement('h3')
+                sect3h3.textContent = resourceHead
+                const sect3p = document.createElement('p')
+                sect3p.textContent = resourceText
+
+                const sect3a = document.createElement('a')
+                sect3a.setAttribute("href", resourceURL)
+                sect3a.textContent = resourceLabel
+
+                sect3.append(sect3h3)
+                sect3.append(sect3p)
+                sect3.append(sect3a)
+            }
+
+
+
+            // ---------------- HUNGER PAGE ----------------
+            if (page.includes("hunger.html")) {
+
+                const introSection = document.getElementById("intro-section");
+
+                const intro = data.intro
+                const title1 = intro.title
+                const introText = intro.Description
+
+                const h1Element = document.createElement('h1')
+                h1Element.textContent = title1
+
+                const pElement = document.createElement('p')
+                pElement.textContent = introText
+
+                introSection.appendChild(h1Element)
+                introSection.appendChild(pElement)
+
+                //why this goal matters hunger.html
+                const sect1 = document.getElementById("sect1")
+                const why = data.whyThisGoalMatters
+                const whyHead = why.Heading
+                const whyText = why.text
+
+                const sect1h3 = document.createElement('h3')
+                sect1h3.textContent = whyHead
+                const sect1Text = document.createElement('p')
+                sect1Text.textContent = whyText
+
+                sect1.append(sect1h3)
+                sect1.append(sect1Text)
+
+                //Possible policies to make change hunger.html
+                const sect2 = document.getElementById("sect2")
+                const policy = data.localPolicies
+                const policyHead = policy.Heading
+
+                const sect2h3 = document.createElement('h3')
+                sect2h3.textContent = policyHead
+                sect2.append(sect2h3)
+
+                const articlesArray = policy.policies
+                const idArray = ["article1", "article2", "article3"]
+                for (let i = 0; i < articlesArray.length; i++) {
+                    const artId = idArray[i]
+                    const art = document.getElementById(artId)
+                    const dataArt = policy.policies[i]
+                    const dataArtText = dataArt.Text
+                    const dataArtImg = dataArt.image
+                    const dataArtAlt = dataArt.alt
+                    const artText = document.createElement('p')
+                    artText.textContent = dataArtText
+                    const artImg = document.createElement('img')
+                    artImg.setAttribute("src", dataArtImg)
+                    artImg.setAttribute("alt", dataArtAlt)
+
+                    art.append(artText)
+                    art.append(artImg)
+                }
+
+                //additional resources hunger.html
+                const sect3 = document.getElementById("sect3")
+                const resource = data.additionalResources1
+                const resourceHead = resource.Heading
+                const resourceText = resource.text
+                const resourceLink = resource.link
+                const resourceURL = resourceLink.url
+                const resourceLabel = resourceLink.label
+
+                const sect3h3 = document.createElement('h3')
+                sect3h3.textContent = resourceHead
+                const sect3p = document.createElement('p')
+                sect3p.textContent = resourceText
+
+                const sect3a = document.createElement('a')
+                sect3a.setAttribute("href", resourceURL)
+                sect3a.textContent = resourceLabel
+
+                sect3.append(sect3h3)
+                sect3.append(sect3p)
+                sect3.append(sect3a)
+
+                //next goal page here
+            }
+
+            if (page.includes("cities.html")) {
+
+                  const introSection = document.getElementById("intro-section");
+
+                const intro = data.intro2
+                const title1 = intro.title
+                const introText = intro.Description
+
+                const h1Element = document.createElement('h1')
+                h1Element.textContent = title1
+
+                const pElement = document.createElement('p')
+                pElement.textContent = introText
+
+                introSection.appendChild(h1Element)
+                introSection.appendChild(pElement)
+                //why this goal matters cities.html
+                const sect1 = document.getElementById("sect1")
+                const why = data.whyThisGoalMatters2
+                const whyHead = why.Heading
+                const whyText = why.text
+
+                const sect1h3 = document.createElement('h3')
+                sect1h3.textContent = whyHead
+                const sect1Text = document.createElement('p')
+                sect1Text.textContent = whyText
+
+                sect1.append(sect1h3)
+                sect1.append(sect1Text)
+
+                //Possible policies to make change cities.html
+                const sect2 = document.getElementById("sect2")
+                const policy = data.localPolicies2
+                const policyHead = policy.Heading
+
+                const sect2h3 = document.createElement('h3')
+                sect2h3.textContent = policyHead
+                sect2.append(sect2h3)
+
+                //Article loop
+                const articlesArray = policy.policies
+                const idArray = ["article1", "article2", "article3"]
+                for (let i = 0; i < articlesArray.length; i++) {
+                    const artId = idArray[i]
+                    const art = document.getElementById(artId)
+                    const dataArt = policy.policies[i]
+                    const dataArtText = dataArt.Text
+                    const dataArtImg = dataArt.image
+                    const dataArtAlt = dataArt.alt
+                    const artText = document.createElement('p')
+                    artText.textContent = dataArtText
+                    const artImg = document.createElement('img')
+                    artImg.setAttribute("src", dataArtImg)
+                    artImg.setAttribute("alt", dataArtAlt)
+
+                    art.append(artText)
+                    art.append(artImg)
+                }
+
+                //additional resources cities.html
+                const sect3 = document.getElementById("sect3")
+                const resource = data.additionalResources2
+                const resourceHead = resource.Heading
+                const resourceText = resource.text
+                const resourceLink = resource.link
+                const resourceURL = resourceLink.url
+                const resourceLabel = resourceLink.label
+
+                const sect3h3 = document.createElement('h3')
+                sect3h3.textContent = resourceHead
+                const sect3p = document.createElement('p')
+                sect3p.textContent = resourceText
+
+                const sect3a = document.createElement('a')
+                sect3a.setAttribute("href", resourceURL)
+                sect3a.textContent = resourceLabel
+
+                sect3.append(sect3h3)
+                sect3.append(sect3p)
+                sect3.append(sect3a)
+            }
+        })
+
+        .catch(error => console.error('Error fetching signup data:', error));
+});

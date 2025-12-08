@@ -42,7 +42,10 @@ app.get('/team.json', (req, res) => {
     res.sendFile(path.join(__dirname, 'data', 'team.json'));
 });
 
-// Email validation
+app.get('/goals.json', (req, res) => {
+    res.sendFile(path.join(__dirname, 'data', 'goals.json'));
+});
+
 app.post("/contact", (req, res) => {
     console.log(req.body);
     

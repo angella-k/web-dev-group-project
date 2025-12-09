@@ -175,43 +175,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load signup.json content if on signup page
 document.addEventListener('DOMContentLoaded', () => {
-    const signupForm = document.getElementById('signupForm');
+    const textSection = document.querySelector('.text-section');
+    
+    // Check if on signup page by looking for the class
+    const isSignupPage = document.body.classList.contains('signup-page') || 
+    (textSection && !document.querySelector('.banner'));
 
-    // Only run this on signup page
-    if (!signupForm) return;
+    // Only run on signup page
+    if (!isSignupPage || document.querySelector('.banner')) return;
 
     fetch('/signup.json')
         .then(response => response.json())
         .then(data => {
 
-            // Title and description
-            const textSection = document.querySelector('.text-section');
-            const title = textSection.querySelector('h2');
-            const description = textSection.querySelector('p');
-
+            // Create title and description
+            const title = document.createElement('h2');
             title.textContent = data.signup.title;
+            
+            const description = document.createElement('p');
             description.textContent = data.signup.description;
 
-            // Form labels
-            const firstNameLabel = document.querySelector('label[for="firstName"]');
+            // Create form
+            const form = document.createElement('form');
+            form.id = 'signupForm';
+            form.setAttribute('novalidate', '');
+
+            // First Name
+            const firstNameLabel = document.createElement('label');
+            firstNameLabel.setAttribute('for', 'firstName');
             firstNameLabel.textContent = data.signup.form.labels.firstName.label;
+            
+            const firstNameInput = document.createElement('input');
+            firstNameInput.type = 'text';
+            firstNameInput.id = 'firstName';
+            firstNameInput.name = 'firstName';
+            firstNameInput.required = true;
 
-            const lastNameLabel = document.querySelector('label[for="lastName"]');
+            // Last Name
+            const lastNameLabel = document.createElement('label');
+            lastNameLabel.setAttribute('for', 'lastName');
             lastNameLabel.textContent = data.signup.form.labels.lastName.label;
+            
+            const lastNameInput = document.createElement('input');
+            lastNameInput.type = 'text';
+            lastNameInput.id = 'lastName';
+            lastNameInput.name = 'lastName';
+            lastNameInput.required = true;
 
-            const emailLabel = document.querySelector('label[for="email"]');
+            // Email
+            const emailLabel = document.createElement('label');
+            emailLabel.setAttribute('for', 'email');
             emailLabel.textContent = data.signup.form.labels.email.label;
+            
+            const emailInput = document.createElement('input');
+            emailInput.type = 'email';
+            emailInput.id = 'email';
+            emailInput.name = 'email';
+            emailInput.required = true;
 
-            const messageLabel = document.querySelector('label[for="comments"]');
+            // Message/Comments
+            const messageLabel = document.createElement('label');
+            messageLabel.setAttribute('for', 'comments');
             messageLabel.textContent = data.signup.form.labels.message.label;
-
-            // Textarea
-            const commentsTextarea = document.getElementById('comments');
+            
+            const commentsTextarea = document.createElement('textarea');
+            commentsTextarea.id = 'comments';
+            commentsTextarea.name = 'comments';
+            commentsTextarea.rows = 4;
             commentsTextarea.placeholder = data.signup.form.labels.message.placeholder;
 
             // Submit button
-            const submitButton = signupForm.querySelector('button[type="submit"]');
+            const submitButton = document.createElement('button');
+            submitButton.type = 'submit';
             submitButton.textContent = data.signup.form.button;
+
+            // Response message
+            const responseMessage = document.createElement('p');
+            responseMessage.id = 'responseMessage';
+
+            // Append all elements to form
+            form.appendChild(firstNameLabel);
+            form.appendChild(firstNameInput);
+            form.appendChild(lastNameLabel);
+            form.appendChild(lastNameInput);
+            form.appendChild(emailLabel);
+            form.appendChild(emailInput);
+            form.appendChild(messageLabel);
+            form.appendChild(commentsTextarea);
+            form.appendChild(submitButton);
+            form.appendChild(responseMessage);
+
+            // Append everything to text section
+            textSection.appendChild(title);
+            textSection.appendChild(description);
+            textSection.appendChild(form);
 
         })
         .catch(error => console.error('Error fetching signup data:', error));
@@ -229,29 +286,47 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
 
             // Banner section
-            const bannerTeamTitle = bannerTeamSection.querySelector('h1');
-            const bannerTeamButton = bannerTeamSection.querySelector('.bannerTeam-button');
-            
+            const bannerTeamTitle = document.createElement('h1');
             bannerTeamTitle.textContent = data.bannerTeam.title;
+            
+            const bannerTeamImage = document.createElement('img');
+            bannerTeamImage.classList.add('bannerTeam-image');
+            bannerTeamImage.alt = data.bannerTeam.title;
+            
+            const bannerTeamButton = document.createElement('button');
+            bannerTeamButton.classList.add('bannerTeam-button');
             bannerTeamButton.textContent = data.bannerTeam.buttonText;
+            bannerTeamButton.onclick = () => location.href = '#team';
+            
+            // Append banner elements
+            bannerTeamSection.appendChild(bannerTeamTitle);
+            bannerTeamSection.appendChild(bannerTeamImage);
+            bannerTeamSection.appendChild(bannerTeamButton);
             
             // Background image
             bannerTeamSection.style.backgroundImage = `url('${data.bannerTeam.image}')`;
             
             // Section 1
             const section1 = document.querySelector('.content-section-1');
-            const section1Heading = section1.querySelector('h2');
-            const section1Text = section1.querySelector('p');
-
+            const section1Heading = document.createElement('h2');
             section1Heading.textContent = data.section1.heading;
+            
+            const section1Text = document.createElement('p');
             section1Text.textContent = data.section1.text;
+            
+            section1.appendChild(section1Heading);
+            section1.appendChild(section1Text);
 
             // Team section
             const section2 = document.querySelector('.content-section-2');
-            const section2Heading = section2.querySelector('h2');
-            const teamGrid = section2.querySelector('.team-grid');
-
+            const section2Heading = document.createElement('h2');
             section2Heading.textContent = data.section2.heading;
+            
+            const teamGrid = document.createElement('div');
+            teamGrid.classList.add('team-grid');
+
+            section2.appendChild(section2Heading);
+            section2.appendChild(teamGrid);
 
             data.section2.members.forEach(member => {
                 const memberDiv = document.createElement('div');
@@ -274,30 +349,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 teamGrid.appendChild(memberDiv);
             });
 
-            // signup section
-            const signupContent = document.querySelector('.signup-content');
-            const signupHeading = signupContent.querySelector('h2');
-            const signupText = signupContent.querySelector('p');
-            const signupButton = document.querySelector('.signup-button');
-
+            // Signup section
+            const signupSection = document.querySelector('.signup-section');
+            const signupBox = document.createElement('div');
+            signupBox.classList.add('signup-box');
+            
+            const signupContent = document.createElement('div');
+            signupContent.classList.add('signup-content');
+            
+            const signupHeading = document.createElement('h2');
             signupHeading.textContent = data.signup.heading;
+            
+            const signupText = document.createElement('p');
             signupText.textContent = data.signup.text;
+            
+            const signupButton = document.createElement('button');
+            signupButton.classList.add('signup-button');
             signupButton.textContent = data.signup.buttonText;
             signupButton.onclick = () => window.location.href = data.signup.buttonUrl;
+            
+            signupContent.appendChild(signupHeading);
+            signupContent.appendChild(signupText);
+            signupBox.appendChild(signupContent);
+            signupBox.appendChild(signupButton);
+            signupSection.appendChild(signupBox);
 
             // Resources section
-            const resourcesContent = document.querySelector('.resources-content');
-            const resourcesHeading = resourcesContent.querySelector('h2');
-            const resourcesText = resourcesContent.querySelector('p');
-            const resourcesButton = resourcesContent.querySelector('.resources-button');
-            const resourcesImage = document.querySelector('.resources-image');
-
+            const resourcesSection = document.querySelector('.resources-section');
+            const resourcesGrid = document.createElement('div');
+            resourcesGrid.classList.add('resources-grid');
+            
+            const resourcesContent = document.createElement('div');
+            resourcesContent.classList.add('resources-content');
+            
+            const resourcesHeading = document.createElement('h2');
             resourcesHeading.textContent = data.resources.heading;
+            
+            const resourcesText = document.createElement('p');
             resourcesText.textContent = data.resources.text;
+            
+            const resourcesButton = document.createElement('button');
+            resourcesButton.classList.add('resources-button');
             resourcesButton.textContent = data.resources.buttonText;
             resourcesButton.onclick = () => window.open(data.resources.buttonUrl, '_blank');
+            
+            const resourcesImage = document.createElement('img');
+            resourcesImage.classList.add('resources-image');
             resourcesImage.src = data.resources.image;
             resourcesImage.alt = data.resources.heading;
+            
+            resourcesContent.appendChild(resourcesHeading);
+            resourcesContent.appendChild(resourcesText);
+            resourcesContent.appendChild(resourcesButton);
+            resourcesGrid.appendChild(resourcesContent);
+            resourcesGrid.appendChild(resourcesImage);
+            resourcesSection.appendChild(resourcesGrid);
 
         })
         .catch(error => console.error('Error fetching team data:', error));

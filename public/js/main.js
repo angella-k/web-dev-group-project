@@ -470,6 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const h1Element = document.createElement('h1')
                 h1Element.textContent = title1
 
+                //Intro text and button on banner 
                 const pElement = document.createElement('p')
                 pElement.textContent = introText
                 const buttonElement = document.createElement('button')
@@ -505,7 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sect2h3.textContent = policyHead
                 sect2.insertBefore(sect2h3, articles)
 
-                //Article loop
+                //Article loop with array to match article ids to the content in json array
                 const articlesArray = policy.policies
                 const idArray = ["article1", "article2", "article3"]
                 for (let i = 0; i < articlesArray.length; i++) {
@@ -574,6 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const h1Element = document.createElement('h1')
                 h1Element.textContent = title1
 
+                //Intro text and button on banner 
                 const pElement = document.createElement('p')
                 pElement.textContent = introText
                 const buttonElement = document.createElement('button')
@@ -609,7 +611,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sect2h3.textContent = policyHead
                 sect2.insertBefore(sect2h3,articles)
 
-                //article loop
+                //Article loop with array to match article ids to the content in json array
 
                 const articlesArray = policy.policies
                 const idArray = ["article1", "article2", "article3"]
@@ -678,6 +680,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const h1Element = document.createElement('h1')
                 h1Element.textContent = title1
 
+                //Intro text and button on banner 
                 const pElement = document.createElement('p')
                 pElement.textContent = introText
                 const buttonElement = document.createElement('button')
@@ -713,7 +716,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sect2h3.textContent = policyHead
                 sect2.insertBefore(sect2h3, articles)
 
-                //Article loop
+                //Article loop with array to match article ids to the content in json array
                 
                 const articlesArray = policy.policies
                 const idArray = ["article1", "article2", "article3"]

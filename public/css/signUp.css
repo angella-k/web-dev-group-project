@@ -5,7 +5,12 @@
     --tertiary: #E77EF8;
     --background: #EFE8F4;
 }
-
+main {
+    background-image: url("../assets/signupBackground.png");
+    background-repeat: no-repeat;
+    background-color: var(--background);
+    background-size: 120% 120%;
+}
 main button {
     background-color: #75bba088;
     color: white;

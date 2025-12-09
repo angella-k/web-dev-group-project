@@ -13,19 +13,19 @@
     "members": [
       {
         "name": "Angella Howard",
-        "description": "little paragraph about what angella contributed"
+        "description": "I made most of the css and validated our JSON."
       },
       {
         "name": "Leia Richards",
-        "description": "little paragraph about what leia contributed"
+        "description": "I researched our goals and created our goal pages."
       },
       {
         "name": "Conor Fitzgerald",
-        "description": "little paragraph about what Conor contributed"
+        "description": "I helped make the home page, team page and signup page."
       },
       {
         "name": "Jake Cunningham",
-        "description": "little paragraph about what jake contributed"
+        "description": "I wrote the JSON for the goal pages."
       }
     ]
   },
@@ -37,7 +37,7 @@
   },
   "resources": {
     "heading": "Additional resources",
-    "text": "A dedicated group of individuals committed to promoting sustainability and environmental awareness in our community.",
+    "text": "During the development of our website, we often used the UN's website, it is a great educational resource and we highly reccomend it to anyone who want to do further research.",
     "buttonText": "UN Page",
     "buttonUrl": "https://sdgs.un.org/goals",
     "image": "assets/goal2.jpg"

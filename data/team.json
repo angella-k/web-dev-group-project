@@ -13,19 +13,19 @@
     "members": [
       {
         "name": "Angella Howard",
-        "description": "I made most of the css and validated our JSON."
+        "description": "I made the wieframe templates, most of the css, index.html with javascript an json, the header and footer and server.js."
       },
       {
         "name": "Leia Richards",
-        "description": "I researched our goals and created our goal pages."
+        "description": "I researched our goals, wrote 2/3 of the goal html, wrote the goal page css and wrote all the JSON for our goal pages."
       },
       {
         "name": "Conor Fitzgerald",
-        "description": "I helped make the home page, team page and signup page."
+        "description": "I helped make the home page, team.html and signup.html with its javascript and json and css."
       },
       {
         "name": "Jake Cunningham",
-        "description": "I wrote the JSON for the goal pages."
+        "description": "I wrote 1/3rd of the goal html and created the javascript to get the content from the goal page json and display the website"
       }
     ]
   },

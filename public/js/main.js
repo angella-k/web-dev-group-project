@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pElement.textContent = introText
                 const buttonElement = document.createElement('button')
                 buttonElement.setAttribute("class", "banner-button")
-                buttonElement.setAttribute("onclick", "location.href='#sect1'")
+                buttonElement.setAttribute("onclick", "location.href='#sect2'")
                 buttonElement.textContent = introbutton
 
                 introSection.appendChild(h1Element)
@@ -545,9 +545,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 sect3p.textContent = resourceText
 
                 //Button linking to sdg website
-                const sect3a = document.createElement('button')
+                const sect3a = document.createElement('a')
                 sect3a.setAttribute("href", resourceURL)
-                sect3a.setAttribute("class","find-out-button")  
+                sect3a.setAttribute("class","info-button")  
                 sect3a.textContent = resourceLabel
 
                 const arImg = document.createElement('img')
@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pElement.textContent = introText
                 const buttonElement = document.createElement('button')
                 buttonElement.setAttribute("class", "banner-button")
-                buttonElement.setAttribute("onclick", "location.href='#sect1'")
+                buttonElement.setAttribute("onclick", "location.href='#sect2'")
                 buttonElement.textContent = introbutton
 
                 introSection.appendChild(h1Element)
@@ -652,9 +652,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 sect3p.textContent = resourceText
 
                 //Button linking to sdg website
-                const sect3a = document.createElement('button')
+                const sect3a = document.createElement('a')
                 sect3a.setAttribute("href", resourceURL)
-                sect3a.setAttribute("class","find-out-button")
+                sect3a.setAttribute("class","info-button")
                 sect3a.textContent = resourceLabel
 
                 const arImg = document.createElement('img')
@@ -687,7 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pElement.textContent = introText
                 const buttonElement = document.createElement('button')
                 buttonElement.setAttribute("class", "banner-button")
-                buttonElement.setAttribute("onclick", "location.href='#sect1'")
+                buttonElement.setAttribute("onclick", "location.href='#sect2'")
                 buttonElement.textContent = introbutton
 
                 introSection.appendChild(h1Element)
@@ -758,9 +758,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 sect3p.textContent = resourceText
 
                 //Button linking to sdg website
-                const sect3a = document.createElement('button')
+                const sect3a = document.createElement('a')
                 sect3a.setAttribute("href", resourceURL)
-                sect3a.setAttribute("class","find-out-button")
+                sect3a.setAttribute("class","info-button")
                 sect3a.textContent = resourceLabel
 
                 const arImg = document.createElement('img')

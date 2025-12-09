@@ -544,6 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sect3p = document.createElement('p')
                 sect3p.textContent = resourceText
 
+                //Button linking to sdg website
                 const sect3a = document.createElement('button')
                 sect3a.setAttribute("href", resourceURL)
                 sect3a.setAttribute("class","find-out-button")  
@@ -650,6 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sect3p = document.createElement('p')
                 sect3p.textContent = resourceText
 
+                //Button linking to sdg website
                 const sect3a = document.createElement('button')
                 sect3a.setAttribute("href", resourceURL)
                 sect3a.setAttribute("class","find-out-button")
@@ -755,6 +757,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sect3p = document.createElement('p')
                 sect3p.textContent = resourceText
 
+                //Button linking to sdg website
                 const sect3a = document.createElement('button')
                 sect3a.setAttribute("href", resourceURL)
                 sect3a.setAttribute("class","find-out-button")

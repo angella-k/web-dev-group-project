@@ -1,7 +1,8 @@
 {
   "banner": {
     "title": "Importance of local sustainability",
-    "text": "Learn how our community can contribute to global sustainability efforts through local actions.",
+       "text": "Sustainability ensures that our needs are met for all future generations and its important for everyone to promote sustainable practices to help our communities. Learn how our community can contribute to global sustainability efforts through local actions.",
+    "image": {
     "image": {
       "src": "assets/banner.jpg",
       "alt": "Sustainability Image"

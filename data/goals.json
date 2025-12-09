@@ -1,12 +1,12 @@
 {
     "intro":{
         "title":"Zero Hunger",
-        "Description":" The third sustainable goal we have chosen is Zero Hunger, this goal focuses on ending hunger, achieving food security and improved nutrition and promoting sustainable agriculture  ",
+        "Description":" The second sustainable goal we have chosen is Zero Hunger, this goal focuses on ending hunger, achieving food security and improved nutrition and promoting sustainable agriculture  ",
         "buttonText":"Find out more"
     },
     "whyThisGoalMatters":{
         "Heading":"Why this goal matters",
-        "text":"Zero hunger means less children than ever before will be born into food insecurity ensuring equal chances for all. It also means that people will have access to safe, nutritious and sufficient food all year round which is essential for a healthy life. Achieving this goal will also promote sustainable agriculture which is vital for protecting the environment and ensuring food security for future generations."
+        "text":"Zero hunger means less children than ever before will be born into food insecurity, giving them a fairer and healthier start in life. When everybody has access to nutritious, safe and sufficient food they are able to grow and develop to their full potential, leading to healthier and more productive lives. Achieving zero hunger also means that we are supporting sustainable agriculture, which is vital for protecting the environment and combating climate change."
     },
     "localPolicies":{
         "Heading":"Local Policies to support Zero Hunger",
@@ -30,7 +30,7 @@
     },
     "additionalResources":{
         "Heading":"Additional Resources",
-        "text":"On the global goals website you can find many organisations to help make change",
+        "text":"For more information on how to help achieve zero hunger and on the United Nations other Sustainable Development Goals, including current targets and progress updates, please click the button below which will take you to the UN's Sustainable Goals Page.",
         "link":{
             "url":"https://sdgs.un.org/goals/goal2",
             "label":"Find out more"
@@ -46,19 +46,19 @@
 
     "intro1":{
         "title":"Gender Equality",
-        "Description":"The third sustainable goal we have chosen is to achieve gender equality and empower all women and girls.",
+        "Description":"The second sustainable goal we have chosen is to achieve gender equality and empower all women and girls.",
         "buttonText":"Find out more"
 
     },
     "whyThisGoalMatters1":{
         "Heading":"Why this goal matters",
-        "text":"Gender equality is a goal designed to end all forms of discrimination against women and girls everywhere"
+        "text":"Achieving this goal isnt only a moral imperative, it is also an incredibly powerful driver of progress. When women and girls have equal access to employment, education and oppurtunities, communities and economies thrive and grow. The closing of the gender gap benefits everyone. A safer, healthier and more inclusive world can be created through the abolishment of gender inequality."
     },
     "localPolicies1":{
         "Heading":"Possible policies to make change at the local level",
         "policies":[
             {
-                "Text":"Target 5.5 of the sustainable development goals is to Ensure women's full and effective participation in leadership and decision-making. As policy makers you should ensure inclusion of women and hire more women in prominent roles. You should also encourage companies and corporations to include more women in leadership roles.",               
+                "Text":"Target 5.5 of the sustainable development goals is to Ensure women's full and effective participation in leadership and decision-making. As policy makers you should ensure inclusion of women and hire more women in prominent roles. You should also encourage companies and corporations to include more women in leadership roles. You can do this by helping promote fundraising towards women's rights and education organisations that help advance women despite the barriers they face.",               
                 "image":"assets/G3T1.jpg",
                 "alt":""
             },
@@ -76,7 +76,7 @@
     },
     "additionalResources1":{
         "Heading":"Additional Resources",
-        "text":"On the global goals website you can find many organisations to help make change",
+        "text":"For more information on how to help achieve gender equality and on the United Nations other Sustainable Development Goals, including current targets and progress updates, please click the button below which will take you to the UN's Sustainable Goals Page.",
         "link":{
             "url":"https://globalgoals.org/goals/5-gender-equality/",
             "label":"Find out more"
@@ -92,7 +92,7 @@
     },
     "whyThisGoalMatters2":{
         "Heading":"Why this goal matters",
-        "text":"Sustainable cities and Communities means future and current cities and human settlements will be more inclusive, safe, resilient and sustainable than ever before"
+        "text":"Sustainable cities and Communities means future and current cities and human settlements will be more inclusive, safe, resilient and sustainable than ever before. With more than half of the world's population living in urban areas, and this number expected to increase to nearly 70% by 2050, it is crucial that we focus on making our cities more sustainable. Sustainable cities can help reduce poverty and inequality, improve health and well-being, and promote economic growth. They can also help mitigate the impacts of climate change by reducing greenhouse gas emissions and promoting sustainable transportation and energy use."
     },
     "localPolicies2":{
         "Heading":"Local Policies to support Sustainable Cities and Communities",
@@ -102,7 +102,7 @@
                 "image":"assets/G1T1.jpg"
             },
             {
-                "Text":"Target 11.4 of the sustainable cities and communities goal is to strengthen efforts to protect and safegaurd the world's cultural and natural heritage. As a policy maker you have the power to ensure nobody's culture or heritage is threatened, you can do this by encouraging education in schools on the topic and holding fundraising events to fund the protection of world heritage sites. ",
+                "Text":"Target 11.4 of the Sustainable Cities and Communities goal focuses on strengthening efforts to protect and safeguard the entire world’s cultural and natural heritage. Included in this is everything from historic buildings and sacred sites to traditional practices, languages, and landscapes that hold significance for communities. Ensuring these elements are preserved is essential because they not only connect us to our past they also shape our identity and provide invaluable knowledge for future generations.As a policy maker, you have the power to ensure that nobody's culture or heritage is threatened or forgotten. You can support this by encouraging schools to teach students about the importance of cultural and natural heritage, helping young people understand why these sites and traditions matter and why it is therefore essential to preserve and protect them. You can also organise or promote fundraising events to provide financial resources for conserving and restoring world heritage sites. By taking these actions, you help protect the stories, environments, and traditions that make our world rich, diverse, and meaningful.",
                 "image":"assets/G1T2.jpg"
             },
             {
@@ -113,7 +113,7 @@
     },
     "additionalResources2":{
         "Heading":"Additional Resources",
-        "text":"On the global goals website you can find many organisations to help make change",
+        "text":"For more information on sustainable cities and on the United Nations other Sustainable Development Goals, including current targets and progress updates, please click the button below which will take you to the UN's Sustainable Goals Page.",
         "link":{
             "url":"https://sdgs.un.org/goals/goal11/",
             "label":"Find out more"

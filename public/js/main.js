@@ -375,23 +375,18 @@ document.addEventListener('DOMContentLoaded', () => {
             data.section2.members.forEach(member => {
                 const memberDiv = document.createElement('div');
                 memberDiv.classList.add('team-member');
-
+            
                 const memberName = document.createElement('h3');
                 memberName.textContent = member.name;
-
+            
                 const memberDesc = document.createElement('p');
                 memberDesc.textContent = member.description;
-
-                const memberImage = document.createElement('img');
-                memberImage.src = member.image;
-                memberImage.alt = member.name;
-                memberImage.classList.add('team-member-image');
-
+            
                 memberDiv.appendChild(memberName);
                 memberDiv.appendChild(memberDesc);
-                memberDiv.appendChild(memberImage);
                 teamGrid.appendChild(memberDiv);
             });
+
 
             // Signup section
             const signupSection = document.querySelector('.signup-section');

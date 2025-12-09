@@ -30,7 +30,7 @@
     },
     "additionalResources":{
         "Heading":"Additional Resources",
-        "text":"On the global goals website you can find many organisations to help make change",
+        "text":"For more information on how to help achieve zero hunger and on the United Nations other Sustainable Development Goals, including current targets and progress updates, please click the button below which will take you to the UN's Sustainable Goals Page.",
         "link":{
             "url":"https://sdgs.un.org/goals/goal2",
             "label":"Find out more"
@@ -76,7 +76,7 @@
     },
     "additionalResources1":{
         "Heading":"Additional Resources",
-        "text":"On the global goals website you can find many organisations to help make change",
+        "text":"For more information on how to help achieve gender equality and on the United Nations other Sustainable Development Goals, including current targets and progress updates, please click the button below which will take you to the UN's Sustainable Goals Page.",
         "link":{
             "url":"https://globalgoals.org/goals/5-gender-equality/",
             "label":"Find out more"
@@ -113,7 +113,7 @@
     },
     "additionalResources2":{
         "Heading":"Additional Resources",
-        "text":"On the global goals website you can find many organisations to help make change",
+        "text":"For more information on sustainable cities and on the United Nations other Sustainable Development Goals, including current targets and progress updates, please click the button below which will take you to the UN's Sustainable Goals Page.",
         "link":{
             "url":"https://sdgs.un.org/goals/goal11/",
             "label":"Find out more"

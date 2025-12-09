@@ -177,11 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const textSection = document.querySelector('.text-section');
     
-    // Check if on signup page by looking for the class
+    // Check if we're on signup page by looking for the specific class
     const isSignupPage = document.body.classList.contains('signup-page') || 
-    (textSection && !document.querySelector('.banner'));
+                         (textSection && !document.querySelector('.banner'));
 
-    // Only run on signup page
+    // Only run this on signup page
     if (!isSignupPage || document.querySelector('.banner')) return;
 
     fetch('/signup.json')
@@ -269,6 +269,50 @@ document.addEventListener('DOMContentLoaded', () => {
             textSection.appendChild(title);
             textSection.appendChild(description);
             textSection.appendChild(form);
+
+            // Form submission handler - must be after form is created
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Disable submit button to prevent double submission
+                submitButton.disabled = true;
+
+                const formBody = {
+                    firstName: firstNameInput.value,
+                    lastName: lastNameInput.value,
+                    email: emailInput.value,
+                    comments: commentsTextarea.value
+                };
+
+                const requestHeaders = {
+                    "Content-Type": "application/json"
+                };
+
+                fetch("/contact", {
+                    method: "POST",
+                    headers: requestHeaders,
+                    body: JSON.stringify(formBody)
+                })
+                    .then(response => response.json())
+                    .then(responseData => {
+                        console.log(responseData);
+                        submitButton.disabled = false; // Re-enable button
+                        if (responseData.success) {
+                            responseMessage.textContent = responseData.message;
+                            responseMessage.style.color = 'green';
+                            form.reset();
+                        } else {
+                            responseMessage.textContent = responseData.message;
+                            responseMessage.style.color = 'red';
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Fetch error:", err);
+                        submitButton.disabled = false; 
+                        responseMessage.textContent = 'An error occurred. Please try again.';
+                        responseMessage.style.color = 'red';
+                    });
+            });
 
         })
         .catch(error => console.error('Error fetching signup data:', error));

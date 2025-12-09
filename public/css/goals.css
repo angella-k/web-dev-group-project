@@ -4,7 +4,7 @@
     --buttons: #75BBA0;
     --tertiary: #E77EF8;
     --background: #EFE8F4;
-}
+}/*this is for easy access to our main colour pallete*/
 
 #intro-section1 {
     background-size: cover;
@@ -31,7 +31,7 @@
     bottom: 0;
     background-color: rgba(42, 65, 106, 0.5);
     z-index: 1;
-}
+}/*this adds an overlay to the banner image to ensure there is a good contrast level for the text on top*/
 
 #intro-section1 h1 {
     color: white;

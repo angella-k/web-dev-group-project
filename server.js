@@ -101,7 +101,7 @@ app.post("/contact", (req, res) => {
     const mail = {
         from: 'groupm18webdev@gmail.com',
         to: email,  // Send to the user's email
-        subject: 'SignUp confirmation',
+        subject: 'SignUp confirmation',//content of signup confirmation email below
         html: `
             <h2>This is a message to confirm your signup!</h2>
             <p>Hello ${firstName},</p>
@@ -122,6 +122,7 @@ app.post("/contact", (req, res) => {
             return res.json({ success: false, message: `There was an error signing up, please try again.` });
         }
         console.log('Email sent:', info.response);
+        //lets the user know theyve successfully signed up
         res.json({ success: true, message: `Thank you for signing up, ${firstName}!` });
     });
 });

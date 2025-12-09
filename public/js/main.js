@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
             textSection.appendChild(description);
             textSection.appendChild(form);
 
-            // Form submission handler - must be after form is created
+            // Form submission handler - this has to go before the form submision
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
 
@@ -452,58 +452,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching team data:', error));
 });
-
-// Form submission handler
-let myForm = document.getElementById('signupForm');
-let firstName = document.getElementById('firstName');
-let lastName = document.getElementById('lastName');
-let email = document.getElementById('email');
-let comments = document.getElementById('comments');
-let confirmMessage = document.getElementById('responseMessage');
-
-if (myForm) {
-    myForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Disable submit button to prevent double submission
-        const submitBtn = myForm.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-
-        const formBody = {
-            firstName: firstName.value,
-            lastName: lastName.value,
-            email: email.value,
-            comments: comments.value
-        };
-
-        const requestHeaders = {
-            "Content-Type": "application/json"
-        };
-
-        fetch("/contact", {
-            method: "POST",
-            headers: requestHeaders,
-            body: JSON.stringify(formBody)
-        })
-            .then(response => response.json())
-            .then(responseData => {
-                console.log(responseData);
-                submitBtn.disabled = false; // Re-enable button
-                if (responseData.success) {
-                    confirmMessage.textContent = responseData.message;
-                    confirmMessage.style.color = 'green';
-                    myForm.reset();
-                } else {
-                    confirmMessage.textContent = responseData.message;
-                    confirmMessage.style.color = 'red';
-                }
-            })
-            .catch(err => {
-                console.error("Fetch error:", err);
-                submitBtn.disabled = false; // Re-enable on error
-            });
-    });
-}
 
 document.addEventListener('DOMContentLoaded', () => {
 
